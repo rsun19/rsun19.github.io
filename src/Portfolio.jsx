@@ -47,7 +47,7 @@ const Portfolio = () => {
             <h1 style={{textAlign: 'center', fontSize: '40px'}}>This website was made with React.</h1>
             <br/>
             <div style={{ textAlign: 'center', marginBottom: '1rem', marginLeft: '15px', marginRight: '15px' }}>
-                <a href="https://github.com/rsun19/Portfolio" target="_blank" style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: 'lightblue', color: 'black', textDecoration: 'none', borderRadius: '4px' }}>View Source Code</a>
+                <a href="https://github.com/rsun19/portfoliodev" target="_blank" style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: 'lightblue', color: 'black', textDecoration: 'none', borderRadius: '4px' }}>View Source Code</a>
             </div>
             <br/>
             <br/>
