@@ -54,6 +54,8 @@ const Home = () => {
                 <br/>
                     <h1 style={{textAlign: 'center', fontSize: '40px'}}>Connect with me!</h1>
                 <br/>
+                    <p style={{textAlign: 'center', fontSize: '40px'}}>Hi! I'm Robert, a rising third-year at the University of Virginia! Feel free to look around and reach out if you want to connect!</p>
+                <br/>
                 <a href="https://www.linkedin.com/in/rob-sun/" target="_blank" style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: 'lightblue', color: 'black', textDecoration: 'none', borderRadius: '4px'  }}>Linkedin</a>
                 <br/>
                 <br/>
