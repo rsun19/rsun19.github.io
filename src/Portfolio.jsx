@@ -19,7 +19,7 @@ const Portfolio = () => {
         {
             title: "Book Blog with Flask",
             description: "Developed a book blog using Flask, with Python as its backend and HTML, CSS, and JavaScript for the front end. The blog posts I create go directly towards a database, and users can use their Google Account to log in and create comments."
-            ,link1: "https://www.robertsrandomreviews.com/about",
+            ,link1: "https://www.robertsrandomreviews.com",
             link2: "https://github.com/rsun19/book-blog-"
         }
     ]
