@@ -27,22 +27,31 @@ const Portfolio = () => {
     return (
         <div>
             <h1 style={{ textAlign: "center", fontWeight: "bold", marginBottom: "20px", fontSize: "40px" }}>Portfolio</h1>   
-            {
-                portfolioItems.map((item, index) => (        
-                        <div key={index} style={{ textAlign: 'center', marginBottom: '1rem', marginLeft: '15px', marginRight: '15px'}}>
-                          <br/>
-                          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{item.title}</h2>
-                          <br/>
-                          <p>{item.description}</p>
-                          <br/>
-                          <a href={item.link1} target="_blank" style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: 'lightblue', color: 'black', textDecoration: 'none', borderRadius: '4px'  }}>View Website</a>
-                          <br/>
-                          <br/>
-                          <a href={item.link2} target="_blank" style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: 'lightblue', color: 'black', textDecoration: 'none', borderRadius: '4px'  }}>View Source Code</a>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '40px' }}>
+                {
+                    portfolioItems.map((item, index) => (   
+                        <div style={{ marginLeft: '40px', marginRight: '40px'}}>  
+                                <div class="w-full rounded overflow-hidden shadow-lg border">
+                                    <div style={{ padding: '40px' }}>
+                                        <div class="font-bold text-xl mb-2">{item.title}</div>
+                                            <p class="text-gray-700 text-base">
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                <div class="px-6 pt-4 pb-2">
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                    <a href={item.link1} target="_blank" style={{ padding: '20px 20px', color: 'black', textDecoration: 'none' }}>View Website</a>
+                                </span>
+                                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                    <a href={item.link2} target="_blank" style={{ padding: '20px 20px', color: 'black', textDecoration: 'none' }}>View Source Code</a>
+                                </span>
+                            </div>
+                            </div>
                         </div>
-                      )
-                )
-            }
+                        )
+                    )
+                }
+            </div>
             <br />
             <h1 style={{textAlign: 'center', fontSize: '40px'}}>This website was made with React.</h1>
             <br/>

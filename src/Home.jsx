@@ -46,7 +46,7 @@ const Home = () => {
                     <br />
                     <br />
                     <button style={buttonStyles}>
-                        <Link to="/projects" className="text-blue-600">Portfolio</Link>    
+                        <Link to="/projects">Portfolio</Link>    
                     </button>
                 </div>
             </div>
