@@ -11,16 +11,16 @@ const Portfolio = () => {
             link2: "https://github.com/rsun19/Trip-Planner-App"
         },
         {
+            title: "Book Blog with Flask",
+            description: "Developed a book blog using Flask, with Python as its backend and HTML, CSS, Tailwind CSS, and JavaScript for the front end. The blog posts I create go directly towards a database, and users can use their Google Account to log in and create comments."
+            ,link1: "https://www.robertsrandomreviews.com",
+            link2: "https://github.com/rsun19/book-blog-"
+        },
+        {
             title: "Pytorch",
             description: "Developed a model using PyTorch that can classify recyclable items. You can take a picture, and upload it to the website to see if it is recyclable or not. I trained ResNet18's pre-trained model with thousands of images and the model is 84% accurate on the testing data. The classifications are metal, glass, plastic, paper, cardboard, and trash."
             ,link1: "https://www.recycleai.tech/",
             link2: "https://github.com/rsun19/RecycleImageClassifier_dev"
-        },
-        {
-            title: "Book Blog with Flask",
-            description: "Developed a book blog using Flask, with Python as its backend and HTML, CSS, and JavaScript for the front end. The blog posts I create go directly towards a database, and users can use their Google Account to log in and create comments."
-            ,link1: "https://www.robertsrandomreviews.com",
-            link2: "https://github.com/rsun19/book-blog-"
         }
     ]
 
