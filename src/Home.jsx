@@ -75,7 +75,7 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-            <div style={{ marginLeft: '40px', marginRight: '40px', marginTop: '40px'}}>  
+            <div style={{ margin: '40px'}}>  
                 <div className="w-full rounded overflow-hidden shadow-lg border">
                     <div style={{ padding: '40px' }}>
                         <div className="font-bold text-xl mb-2">Connect with me!</div>
@@ -96,14 +96,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                <br/>
-                    <h1 style={{textAlign: 'center', fontSize: '40px'}}>Hobbies</h1>
-                <br/>
-            </div> 
             <h1 style={{textAlign: 'center', fontSize: '30px'}}>Favorite books:</h1>
-            <p style={{textAlign: 'center', fontSize: '15px'}}>Data courtesy of my book blog's API</p>
-            <div className="bg-zinc-800" style={{ margin: '20px 40px 40px 40px'}}>
+            <p style={{textAlign: 'center', fontSize: '15px', marginBottom: '30px'}}>Data courtesy of my book blog's API</p>
+            <div className="bg-zinc-800" style={{ margin: '20px 40px 20px 40px'}}>
                 <ul className='ml-3 mr-3'>
                     {reviewsData.map((item) => (
                         <a href={item.url} key={item.id}>
@@ -126,6 +121,10 @@ const Home = () => {
                     ))}
                 </ul>
             </div>
+            <div>
+                    <h1 style={{textAlign: 'center', fontSize: '40px'}}>Hobbies</h1>
+                <br/>
+            </div> 
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                 {slides.map((slide) => (
                     <div
