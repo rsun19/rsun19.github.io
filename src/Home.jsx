@@ -102,14 +102,14 @@ const Home = () => {
                             <li className="pb-3 pt-3" style={{ borderBottom: '1px solid white' }}>
                                 <div className="flex items-center space-x-4">
                                     <div className="flex-1 min-w-0">
-                                        <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                        <p className="text-sm font-medium text-white truncate">
                                         {item.title}
                                         </p>
-                                        <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                                        <p className="text-sm text-gray-400 truncate">
                                         {item.author_name}
                                         </p>
                                     </div>
-                                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                    <div className="inline-flex items-center text-base font-semibold text-white">
                                         Rating: {item.rating_int}/10
                                     </div>
                                 </div>
