@@ -6,7 +6,7 @@
     display: inline-block;
     width: 1px;
     padding-left: 2px;
-    height: 30px;
+    height: 35px;
     background-color: white;
     animation: blink-caret 0.75s infinite;
   }
@@ -30,6 +30,9 @@
     }
     .imageStyle {
         bottom: 30% !important;
+    }
+    #cursor {
+        height: 25px !important;
     }
 }
 
