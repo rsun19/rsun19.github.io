@@ -34,7 +34,7 @@ const Typing = () => {
           setIsTyping(true);
         }
       }
-    }, 150);
+    }, isTyping ? 125 : 75);
 
     return () => clearInterval(typingInterval);
   }, [text, isTyping, wordIndex, words]);
