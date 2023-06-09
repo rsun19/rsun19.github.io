@@ -2,3 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+#cursor {
+    display: inline-block;
+    width: 1px;
+    padding-left: 2px;
+    height: 30px;
+    background-color: white;
+    animation: blink-caret 0.75s infinite;
+  }
+  
+@keyframes blink-caret {
+0%, 100% { opacity: 0; }
+50% { opacity: 1; }
+}
+
+.typingSize {
+    font-size: 40px;
+}
+
+.imageStyle {
+    bottom: 40%;
+}
+
+@media only screen and (max-width: 800px) {
+    .typingSize {
+        font-size: 30px !important;
+    }
+    .imageStyle {
+        bottom: 30% !important;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    .imageStyle {
+        bottom: 42.5% !important;
+    }
+}

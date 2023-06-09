@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import hiking from './assets/hiking.jpg'
 import salsa from './assets/salsa.png'
 import fire from './assets/fire.jpg'
+import Typing from './Typing';
 
 const Home = () => {
     const [reviewsData, setReviewsData] = useState([]);
@@ -62,14 +63,10 @@ const Home = () => {
         <div>
             <div style={{ position: 'relative' }}>
                 <img src={backgroundImage} alt="Image" style={{ width: '100%', height: 'auto' }} />
-                <div style={{ position: 'absolute', top: '25%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-                    <h1 style={{ color: 'white', fontSize: '40px' }} className="font-sans">About Me</h1>
+                <div style={{ position: 'absolute', top: '15%', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', width: '100%' }}>
+                    <Typing />
                 </div>
-                <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                <div className='imageStyle' style={{ position: 'absolute', left: '50%', transform: 'translate(-50%)', textAlign: 'center' }}>
                     <button style={buttonStyles}>
                         <Link to="/projects">Portfolio</Link>    
                     </button>

@@ -587,6 +587,14 @@ video {
   margin-left: 0.75rem;
 }
 
+.mr-0 {
+  margin-right: 0px;
+}
+
+.mr-0\.5 {
+  margin-right: 0.125rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -692,10 +700,6 @@ video {
   padding-top: 1.25rem;
 }
 
-.font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -744,6 +748,60 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+#cursor {
+  display: inline-block;
+  width: 1px;
+  padding-left: 2px;
+  height: 30px;
+  background-color: white;
+  -webkit-animation: blink-caret 0.75s infinite;
+          animation: blink-caret 0.75s infinite;
+}
+
+@-webkit-keyframes blink-caret {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.typingSize {
+  font-size: 40px;
+}
+
+.imageStyle {
+  bottom: 40%;
+}
+
+@media only screen and (max-width: 800px) {
+  .typingSize {
+    font-size: 30px !important;
+  }
+
+  .imageStyle {
+    bottom: 30% !important;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .imageStyle {
+    bottom: 42.5% !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .dark\:text-gray-400 {
     --tw-text-opacity: 1;
@@ -755,4 +813,3 @@ video {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
-
