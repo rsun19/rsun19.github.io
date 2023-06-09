@@ -5,9 +5,9 @@ const Typing = () => {
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState("");
   const words = [
-    "developer.",
-    "student.",
     "visionary.",
+    "software dev.",
+    "student.",
     "book enjoyer.",
     "TV connoisseur.",
     "salsero.",
@@ -18,19 +18,27 @@ const Typing = () => {
     "professional."
   ];
 
+  const delay = ms => new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
+
   useEffect(() => {
-    const typingInterval = setInterval(() => {
+    const typingInterval = setInterval(async () => {
       if (isTyping) {
         if (text.length < words[wordIndex].length) {
           setText(prevText => words[wordIndex].slice(0, prevText.length + 1));
         } else {
-          setTimeout(() => setIsTyping(false), 1200);
+          await delay(500);
+          setIsTyping(false);
         }
       } else {
         if (text.length > 0) {
           setText(prevText => prevText.slice(0, prevText.length - 1));
         } else {
-          setWordIndex(prevIndex => (prevIndex + 1) % words.length)
+          setWordIndex(prevIndex => {
+          const newIndex = (prevIndex + 1) % words.length
+          return newIndex;
+          });
           setIsTyping(true);
         }
       }
