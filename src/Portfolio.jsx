@@ -9,7 +9,7 @@ const Portfolio = () => {
             title: "Trip Planning App Using Flutter",
             description: "Developed a mobile app that allows people to create trip itinenaries, view them on maps, and share them with people. Users can create trip itineraries using Chat GPT, share them with their friends, and download itineraries from other users. Users can also view NYC real-time subway arrivals thanks to the GTFS-rt data given by MTA's API. Users can use direction-by-direction navigation as an alternative to Google maps using Open Street Maps API and Open Route Service API. The application also has two databases: one stored locally using SQLite, and another stored online using Firebase. By doing this, users can log-in using Google Sign In services, and share trip itineraries with others. Warning: The GitHub repo is not updated because I use a private repo currently. The code and organization is not representative of the current state of the app. I recently made large-scale UI changes, many bug fixes, and implemented a caching system, which is not reflected anywhere yet.",
             links: [
-                {id: 1, link: "https://testflight.apple.com/join/f5PW402r", name: "View website"},
+                {id: 1, link: "https://testflight.apple.com/join/f5PW402r", name: "Beta test app"},
                 {id: 2, link: "https://github.com/rsun19/Trip-Planner-App", name: "View source code"} 
             ]
         },
@@ -28,9 +28,10 @@ const Portfolio = () => {
             description: "Developed a joke generator with a web and mobile component. I used React for the web component, and Swift for the iMessage extension component. For the backend, I used Flask and Postgres, and served content with an API.",
             links: [
                 {id: 1, link: "https://robertssun.me/jokegenerator", name: "View website"}, 
-                {id: 2, link: "https://github.com/rsun19/joke-generator-app", name: "View Swift code"},
-                {id: 3, link: "https://github.com/rsun19/jokegenerator", name: "View React code"},
-                {id: 4, link: "https://github.com/rsun19/joke_generator", name: "View Flask code"}
+                {id: 2, link: "https://testflight.apple.com/join/DHtgfi6C", name: "Beta test app"}, 
+                {id: 3, link: "https://github.com/rsun19/joke-generator-app", name: "View Swift code"},
+                {id: 4, link: "https://github.com/rsun19/jokegenerator", name: "View React code"},
+                {id: 5, link: "https://github.com/rsun19/joke_generator", name: "View Flask code"}
             ]
         },
         {
@@ -49,7 +50,7 @@ const Portfolio = () => {
             <h1 style={{ textAlign: "center", fontWeight: "bold", marginBottom: "20px", fontSize: "40px" }}>Portfolio</h1>   
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '40px' }}>
                 {
-                portfolioItems.map((item, index) => (
+                portfolioItems.map((item) => (
                     <div id={item.id} style={{ marginLeft: '40px', marginRight: '40px'}}>  
                         <div className="w-full rounded overflow-hidden shadow-lg border">
                             <div style={{ padding: '40px' }}>
@@ -59,7 +60,7 @@ const Portfolio = () => {
                                 </p>
                                 <div className="pt-5 pb-1">
                                     { 
-                                    item.links.map((link, linkIndex) => (
+                                    item.links.map((link) => (
                                         <span id={link.id} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                                             <a href={link.link} target="_blank" style={{ padding: '20px 0px', color: 'black', textDecoration: 'none' }}>{link.name}</a>
                                         </span>
