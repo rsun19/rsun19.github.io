@@ -81,13 +81,13 @@ const Home = () => {
                         </p>
                         <div className="pt-5 pb-1">
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                <a href="https://www.linkedin.com/in/rob-sun/" target="_blank" style={{ padding: '20px 20px', color: 'black', textDecoration: 'none' }}>LinkedIn</a>
+                                <a href="https://www.linkedin.com/in/rob-sun/" target="_blank" style={{ padding: '20px 0px', color: 'black', textDecoration: 'none' }}>LinkedIn</a>
                             </span>
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                <a href="https://github.com/rsun19" target="_blank" style={{ padding: '20px 20px', color: 'black', textDecoration: 'none' }}>GitHub</a>
+                                <a href="https://github.com/rsun19" target="_blank" style={{ padding: '20px 0px', color: 'black', textDecoration: 'none' }}>GitHub</a>
                             </span>
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                <a href="https://docs.google.com/document/d/1xIxCOk0GNFJ-5rsPaYgbL90n1iOf3J7O6YzK6uhAuu4/edit" target="_blank" style={{ padding: '20px 20px', color: 'black', textDecoration: 'none' }}>View CV</a>
+                                <a href="https://docs.google.com/document/d/1xIxCOk0GNFJ-5rsPaYgbL90n1iOf3J7O6YzK6uhAuu4/edit" target="_blank" style={{ padding: '20px 0px', color: 'black', textDecoration: 'none' }}>View CV</a>
                             </span>
                         </div>
                     </div>
