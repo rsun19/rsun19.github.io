@@ -24,7 +24,7 @@ const Portfolio = () => {
         },
         {
             id: 3,
-            title: "Joke Generator with Swift, React, Flask, and SpaCy.",
+            title: "Joke Generator with Swift, React, and Flask.",
             description: "Developed a joke generator with a web and mobile component. I used React for the web component, and Swift for the iMessage extension component. For the backend, I used Flask and Postgres, and served content with an API.",
             links: [
                 {id: 1, link: "https://robertssun.me/jokegenerator", name: "View website"}, 
