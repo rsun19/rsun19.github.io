@@ -13,7 +13,6 @@ const Home = () => {
 
     useEffect(() => {
         const fetchReviewsData = async () => {
-            console.log("hello")
             try {
                 const response = await fetch('https://robertsrandomreviews.com/api/post');
                 if (response.status === 200) {
@@ -81,11 +80,22 @@ const Home = () => {
                 <div style={{ position: 'absolute', top: '15%', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', width: '100%' }}>
                     <Typing />
                 </div>
+                { md && 
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div style = {{ position: 'absolute', bottom: '10%', textAlign: 'center'}}>
+                        <button style={buttonStyles}>
+                            <Link to="/projects">Portfolio</Link>    
+                        </button>
+                    </div>
+                </div>
+                }
+                { !md && 
                 <div className='imageStyle' style={{ position: 'absolute', left: '50%', transform: 'translate(-50%)', textAlign: 'center' }}>
                     <button style={buttonStyles}>
                         <Link to="/projects">Portfolio</Link>    
                     </button>
                 </div>
+                }
                 { !md && 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <div style = {{ position: 'absolute', bottom: '2%', textAlign: 'center'}}>
