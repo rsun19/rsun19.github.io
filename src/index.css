@@ -24,6 +24,11 @@
     bottom: 40%;
 }
 
+.alert-viewer {
+    left: 50%;
+    top: 2%
+}
+
 @media only screen and (max-width: 800px) {
     .typingSize {
         font-size: 30px !important;

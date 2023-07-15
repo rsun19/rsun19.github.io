@@ -5,9 +5,11 @@ import hiking from './assets/hiking.jpg'
 import salsa from './assets/salsa.png'
 import fire from './assets/fire.jpg'
 import Typing from './Typing';
+import useWidth from './changeWidth.js';
 
 const Home = () => {
     const [reviewsData, setReviewsData] = useState([]);
+    const md = useWidth();
 
     useEffect(() => {
         const fetchReviewsData = async () => {
@@ -62,7 +64,20 @@ const Home = () => {
     return (
         <div>
             <div style={{ position: 'relative' }}>
-                <img src={backgroundImage} alt="Image" style={{ width: '100%', height: 'auto' }} />
+                <div style={{ maxHeight: '800px', overflow: 'hidden'}}>
+                    <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+                        <img src={backgroundImage} alt="Image" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100%', height: 'auto' }} />
+                    </div>
+                </div>
+                { md && <div className='alert-viewer' style = {{ position: 'absolute', transform: 'translateX(-50%)', textAlign: 'center', }}>
+                    <a href='https://robertsrandomreviews.com/' target='_blank' class="text-center lg:px-4">
+                        <div class="p-2 bg-sky-600 items-center text-indigo-100 leading-none rounded-full flex lg:inline-flex" role="alert">
+                            <span class="flex rounded-full bg-red-600 uppercase px-2 py-1 text-xs font-bold mr-3">Attention</span>
+                            <span class="font-semibold mr-2 text-left flex-auto py-2">Looking for my book blog? Click here!</span>
+                            <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+                        </div>
+                    </a>
+                </div> }
                 <div style={{ position: 'absolute', top: '15%', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', width: '100%' }}>
                     <Typing />
                 </div>
@@ -71,6 +86,19 @@ const Home = () => {
                         <Link to="/projects">Portfolio</Link>    
                     </button>
                 </div>
+                { !md && 
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div style = {{ position: 'absolute', bottom: '2%', textAlign: 'center'}}>
+                        <a href='https://robertsrandomreviews.com/' target='_blank' class="text-center lg:px-4">
+                            <div class="p-2 bg-sky-600 items-center text-indigo-100 leading-none rounded-full flex lg:inline-flex" role="alert">
+                                <span class="flex rounded-full bg-red-600 uppercase px-2 py-1 text-xs font-bold mr-3">Attention</span>
+                                <span class="font-semibold mr-2 text-left flex-auto py-1">Looking for my book blog?</span>
+                                <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+                }
             </div>
             <div style={{ margin: '40px'}}>  
                 <div className="w-full rounded overflow-hidden shadow-lg border">
