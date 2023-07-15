@@ -63,11 +63,12 @@ const Home = () => {
     return (
         <div>
             <div style={{ position: 'relative' }}>
-                <div style={{ maxHeight: '800px', overflow: 'hidden'}}>
+                { md && <div style={{ maxHeight: '800px', overflow: 'hidden'}}>
                     <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
                         <img src={backgroundImage} alt="Image" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100%', height: 'auto' }} />
                     </div>
-                </div>
+                </div> }
+                { !md && <img src={backgroundImage} alt="Image" style={{ width: '100%', height: 'auto' }} /> }
                 { md && <div className='alert-viewer' style = {{ position: 'absolute', transform: 'translateX(-50%)', textAlign: 'center', }}>
                     <a href='https://robertsrandomreviews.com/' target='_blank' class="text-center lg:px-4">
                         <div class="p-2 bg-sky-600 items-center text-indigo-100 leading-none rounded-full flex lg:inline-flex" role="alert">
