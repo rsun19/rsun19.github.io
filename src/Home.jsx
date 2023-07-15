@@ -82,7 +82,7 @@ const Home = () => {
                 </div>
                 { md && 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <div style = {{ position: 'absolute', bottom: '10%', textAlign: 'center'}}>
+                    <div style = {{ position: 'absolute', bottom: '20%', textAlign: 'center'}}>
                         <button style={buttonStyles}>
                             <Link to="/projects">Portfolio</Link>    
                         </button>
