@@ -7,11 +7,14 @@ import recycleAI from "./assets/recycleAI.jpg"
 
 const Portfolio = () => {
     useEffect(() => {
+        scrollUp();
+    }, []);
+    const scrollUp = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    }, []);
+    }
     const portfolioItems = [
         {
             id: 1,
@@ -91,6 +94,16 @@ const Portfolio = () => {
                     ))
                 }
             </div>
+            <div class="flex justify-end floating-action-button">
+                <button
+                    class="bg-teal-500 3xl:h-16 text-white font-bold rounded-xl p-4 ml-1 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    onClick={scrollUp}
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+                </svg>      
+                </button>
+            </div>   
             <br />
             <h1 style={{textAlign: 'center', fontSize: '40px'}}>This website was made with React.</h1>
             <br/>

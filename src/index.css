@@ -29,6 +29,15 @@
     top: 2%
 }
 
+.floating-action-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
 @media only screen and (max-width: 800px) {
     .typingSize {
         font-size: 30px !important;

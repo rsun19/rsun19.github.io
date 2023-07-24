@@ -9,11 +9,14 @@ import useWidth from './changeWidth.js';
 
 const Home = () => {
     useEffect(() => {
+        scrollUp();
+    }, []);
+    const scrollUp = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    }, []);
+    }
     const [reviewsData, setReviewsData] = useState([]);
     const md = useWidth();
 
@@ -109,7 +112,7 @@ const Home = () => {
                         <a href='https://robertsrandomreviews.com/' target='_blank' className="text-center lg:px-4">
                             <div class="p-2 bg-sky-600 items-center text-indigo-100 leading-none rounded-full flex lg:inline-flex" role="alert">
                                 <span class="flex rounded-full bg-red-600 uppercase px-2 py-1 text-xs font-bold mr-3">Attention</span>
-                                <span class="font-semibold mr-2 text-left flex-auto py-1">Looking for my book blog?</span>
+                                <span class="font-semibold mr-2 text-left flex-auto py-1 text-sm pastSE:text-md">Looking for my book blog?</span>
                                 <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
                             </div>
                         </a>
@@ -208,7 +211,17 @@ const Home = () => {
                         </div>
                     </div>
                 ))}
-            </div>    
+            </div> 
+            <div class="flex justify-end floating-action-button">
+                <button
+                    class="bg-teal-500 3xl:h-16 text-white font-bold rounded-xl p-4 ml-1 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    onClick={scrollUp}
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+                </svg>      
+                </button>
+            </div>   
             <br/>
             <br/>
         </div>
