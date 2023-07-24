@@ -68,7 +68,7 @@ const Portfolio = () => {
                 {
                 portfolioItems.map((item) => (
                     <div id={item.id} style={{ marginLeft: '40px', marginRight: '40px'}}>  
-                        <div className="max-w-full rounded overflow-hidden shadow-lg border">
+                        <div className="max-w-full rounded-lg overflow-hidden shadow-lg border">
                             <div>
                                 <img src={item.photo} alt="Image" />
                             </div>

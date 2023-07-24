@@ -46,8 +46,8 @@ const Home = () => {
     const buttonStyles = {
         backgroundColor: 'lightblue',
         color: 'white',
-        padding: '0.5rem 1rem',
-        borderRadius: '0.50rem',
+        // padding: '0.5rem 1rem',
+        // borderRadius: '0.50rem',
         cursor: 'pointer',
       };
     const slides = [
@@ -93,16 +93,20 @@ const Home = () => {
                 { md && 
                 <div className='pt-6' style={{ display: 'flex', justifyContent: 'center' }}>
                     <div className='text-md 2xl:text-2xl' style = {{ position: 'absolute', bottom: '20%', textAlign: 'center'}}>
-                        <button style={buttonStyles}>
-                            <Link to="/projects">Portfolio</Link>    
+                        <button className='rounded-lg' style={buttonStyles}>
+                            <Link to="/projects">
+                                <p className='px-3 py-1.5 md:px-6 py-4'>Portfolio</p>
+                            </Link>    
                         </button>
                     </div>
                 </div>
                 }
                 { !md && 
                 <div className='imageStyle' style={{ position: 'absolute', left: '50%', transform: 'translate(-50%)', textAlign: 'center' }}>
-                    <button style={buttonStyles}>
-                        <Link to="/projects">Portfolio</Link>    
+                    <button className='rounded-lg' style={buttonStyles}>
+                        <Link to="/projects">
+                            <p className='px-3 py-1.5'>Portfolio</p>
+                        </Link>    
                     </button>
                 </div>
                 }
@@ -121,7 +125,7 @@ const Home = () => {
                 }
             </div>
             <div style={{ margin: '40px'}}>  
-                <div className="w-full rounded overflow-hidden shadow-lg border">
+                <div className="w-full rounded-lg overflow-hidden shadow-lg border">
                     <div style={{ padding: '40px' }}>
                         <div className="font-bold text-xl mb-2 2xl:text-2xl">Connect with me!</div>
                         <p className="text-gray-700 text-base 2xl:text-xl">
@@ -143,7 +147,7 @@ const Home = () => {
             </div>
             <h1 style={{textAlign: 'center', fontSize: '30px'}}>Favorite books:</h1>
             <p style={{textAlign: 'center', fontSize: '15px', marginBottom: '30px'}}>Data courtesy of my book blog's API</p>
-            <div className="bg-zinc-800" style={{ margin: '20px 40px 20px 40px'}}>
+            <div className="bg-zinc-800 rounded-lg" style={{ margin: '20px 40px 20px 40px'}}>
                 <ul className='ml-3 mr-3'>
                     {reviewsData.map((item) => (
                         <a href={item.url} key={item.id}>
@@ -188,7 +192,7 @@ const Home = () => {
                             height: '100%',
                             }}
                         >
-                            <div className="w-full rounded overflow-hidden shadow-lg border">
+                            <div className="w-full rounded-lg overflow-hidden shadow-lg border">
                                 <div style={{ padding: '20px' }}>
                                     <img
                                     src={slide.image}
