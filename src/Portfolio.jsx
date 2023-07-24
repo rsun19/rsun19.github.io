@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import tripPlanner from "./assets/tripPlanner.jpg"
 import bookBlog from "./assets/bookBlog.jpg"
@@ -6,7 +6,12 @@ import jokeGenerator from "./assets/jokeGenerator.jpg"
 import recycleAI from "./assets/recycleAI.jpg"
 
 const Portfolio = () => {
-
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, []);
     const portfolioItems = [
         {
             id: 1,

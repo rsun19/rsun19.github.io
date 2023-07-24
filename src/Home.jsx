@@ -8,6 +8,12 @@ import Typing from './Typing';
 import useWidth from './changeWidth.js';
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, []);
     const [reviewsData, setReviewsData] = useState([]);
     const md = useWidth();
 
