@@ -30,7 +30,7 @@ const Portfolio = () => {
             id: 2,
             photo: bookBlog,
             title: "Book Blog with Flask",
-            description: "Developed a book blog using Flask, with Python as its backend and HTML, CSS, Tailwind CSS, and JavaScript for the front end. The blog posts I create go directly towards a database, and users can use their Google Account to log in and create comments.",
+            description: "Developed a book blog using Flask, with Python as its backend and HTML, CSS, Tailwind CSS, and JavaScript for the front end. The blog posts I create go directly towards a database, and users can use their Google Account to log in and create comments. It also incorporates the New York Times API to gather bestseller lists.",
             links: [
                 {id: 1, link: "https://www.robertsrandomreviews.com", name: "View website" },
                 {id: 2, link: "https://github.com/rsun19/book-blog-", name: "View source code"} 
