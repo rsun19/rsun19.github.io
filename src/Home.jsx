@@ -3,7 +3,7 @@ import backgroundImage from './assets/myImage.jpg';
 import { Link } from "react-router-dom";
 import hiking from './assets/hiking.jpg'
 import salsa from './assets/salsa.png'
-import fire from './assets/fire.jpg'
+import fire from './assets/hosePour.jpg'
 import Typing from './Typing';
 import useWidth from './changeWidth.js';
 
