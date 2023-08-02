@@ -72,7 +72,7 @@ const Home = () => {
     return (
         <div>
             <div className='pt-12' style={{ position: 'relative' }}>
-                { md && <div style={{ maxHeight: '1200px', overflow: 'hidden'}}>
+            { md && <div style={{ maxHeight: '2500px', overflow: 'hidden'}}>
                     <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
                         <img src={backgroundImage} alt="Image" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100%', height: 'auto' }} />
                     </div>
