@@ -4,6 +4,7 @@ import tripPlanner from "./assets/tripPlanner.jpg"
 import bookBlog from "./assets/bookBlog.jpg"
 import jokeGenerator from "./assets/jokeGenerator.jpg"
 import recycleAI from "./assets/recycleAI.jpg"
+import myHealth from "./assets/Health App.jpg"
 
 const Portfolio = () => {
     useEffect(() => {
@@ -51,6 +52,13 @@ const Portfolio = () => {
         },
         {
             id: 4,
+            photo: myHealth,
+            title: "Health App with Swift",
+            description: "Developed a health prototype app for a client using Swift. Implemented different kinds of charts with various date ranges so analytics are better tracked.",
+            links: []
+        },
+        {
+            id: 5,
             photo: recycleAI,
             title: "Pytorch",
             description: "Developed a model using PyTorch that can classify recyclable items. You can take a picture, and upload it to the website to see if it is recyclable or not. I trained ResNet18's pre-trained model with thousands of images and the model is 84% accurate on the testing data. The classifications are metal, glass, plastic, paper, cardboard, and trash.",
