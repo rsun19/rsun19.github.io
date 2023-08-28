@@ -53,8 +53,8 @@ const Portfolio = () => {
         {
             id: 4,
             photo: myHealth,
-            title: "Health App with Swift",
-            description: "Developed a health prototype app for a client using Swift. Implemented different kinds of charts with various date ranges so analytics are better tracked.",
+            title: "Mental Health App with Swift",
+            description: "Developed a mental health prototype app for a client using Swift. Implemented different kinds of charts with various date ranges so analytics are better tracked.",
             links: []
         },
         {
