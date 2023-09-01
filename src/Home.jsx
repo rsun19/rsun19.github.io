@@ -141,6 +141,9 @@ const Home = () => {
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm 2xl:text-md 4xl:text-xl 5xl:text:2xl font-semibold text-gray-700 mr-2 mb-2">
                                 <a href="https://docs.google.com/document/d/1xIxCOk0GNFJ-5rsPaYgbL90n1iOf3J7O6YzK6uhAuu4/edit" target="_blank" style={{ padding: '20px 0px', color: 'black', textDecoration: 'none' }}>View CV</a>
                             </span>
+                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm 2xl:text-md 4xl:text-xl 5xl:text:2xl font-semibold text-gray-700 mr-2 mb-2">
+                                <a href="mailto:dum2zm@virginia.edu" target="_blank" style={{ padding: '20px 0px', color: 'black', textDecoration: 'none' }}>Email</a>
+                            </span>
                         </div>
                     </div>
                 </div>
