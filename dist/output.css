@@ -748,6 +748,11 @@ video {
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-zinc-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
@@ -806,6 +811,10 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .pl-12 {
   padding-left: 3rem;
 }
@@ -850,6 +859,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-base {
@@ -928,6 +942,45 @@ video {
           filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.background-first {
+  background-image: url('./assets/dark.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-color: #f0f0f0;
+  height: 80vh;
+  z-index: 999;
+}
+
+/*
+.background-hobbies {
+    background-image: url('path/to/your-image.jpg');
+  
+    background-size: cover;
+  
+    background-attachment: fixed;
+  
+    background-position: center center;
+  
+    background-color: #f0f0f0;
+  
+    height: 100vh;
+}
+
+.background-portfolio {
+    background-image: url('path/to/your-image.jpg');
+  
+    background-size: cover;
+  
+    background-attachment: fixed;
+  
+    background-position: center center;
+  
+    background-color: #f0f0f0;
+  
+    height: 100vh;
+} */
+
 #cursor {
   display: inline-block;
   width: 1px;
@@ -971,6 +1024,23 @@ video {
   top: 2%
 }
 
+.carousel-container .slick-next {
+  z-index: 999;
+  right: 15px;
+}
+
+.carousel-container .slick-prev {
+  z-index: 999;
+  left: 15px;
+}
+
+.carousel-container .slick-prev::before,
+.carousel-container .slick-next::before {
+  font-size: 40px;
+  color: black;
+  size: 40px;
+}
+
 .floating-action-button {
   position: fixed;
   bottom: 20px;
@@ -981,6 +1051,16 @@ video {
 }
 
 @media only screen and (max-width: 800px) {
+  .carousel-container .slick-next {
+    z-index: 999;
+    right: 5px;
+  }
+
+  .carousel-container .slick-prev {
+    z-index: 999;
+    left: 5px;
+  }
+
   .typingSize {
     font-size: 30px !important;
   }
@@ -1032,6 +1112,14 @@ video {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .lg\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
+  .lg\:pt-6 {
+    padding-top: 1.5rem;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -1040,9 +1128,9 @@ video {
     line-height: 2rem;
   }
 
-  .\32xl\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .\32xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .\32xl\:text-lg {
@@ -1090,6 +1178,11 @@ video {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+
+  .\33xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 2300px) {
@@ -1128,6 +1221,11 @@ video {
     line-height: 1;
   }
 
+  .\34xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
   .\34xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -1152,6 +1250,11 @@ video {
 
   .\35xl\:text-7xl {
     font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .\35xl\:text-8xl {
+    font-size: 6rem;
     line-height: 1;
   }
 }

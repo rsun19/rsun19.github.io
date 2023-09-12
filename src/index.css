@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+.background-first {
+    background-image: url('./assets/dark.jpeg');
+  
+    background-size: cover;
+  
+    background-attachment: fixed;
+  
+    background-position: center center;
+  
+    background-color: #f0f0f0;
+  
+    height: 80vh;
+
+    z-index: 999;
+}
+/*
+.background-hobbies {
+    background-image: url('path/to/your-image.jpg');
+  
+    background-size: cover;
+  
+    background-attachment: fixed;
+  
+    background-position: center center;
+  
+    background-color: #f0f0f0;
+  
+    height: 100vh;
+}
+
+.background-portfolio {
+    background-image: url('path/to/your-image.jpg');
+  
+    background-size: cover;
+  
+    background-attachment: fixed;
+  
+    background-position: center center;
+  
+    background-color: #f0f0f0;
+  
+    height: 100vh;
+} */
+
 #cursor {
     display: inline-block;
     width: 1px;
@@ -28,6 +72,23 @@
     left: 50%;
     top: 2%
 }
+  
+.carousel-container .slick-next {
+    z-index: 999;
+    right: 15px; 
+}
+
+.carousel-container .slick-prev {
+    z-index: 999;
+    left: 15px;
+}
+
+.carousel-container .slick-prev::before,
+.carousel-container .slick-next::before {
+  font-size: 40px; 
+  color: black; 
+  size: 40px;
+}
 
 .floating-action-button {
     position: fixed;
@@ -39,6 +100,16 @@
   }
 
 @media only screen and (max-width: 800px) {
+    .carousel-container .slick-next {
+        z-index: 999;
+        right: 5px; 
+    }
+    
+    .carousel-container .slick-prev {
+        z-index: 999;
+        left: 5px;
+    }
+
     .typingSize {
         font-size: 30px !important;
     }
