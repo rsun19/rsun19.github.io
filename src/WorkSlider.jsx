@@ -28,7 +28,7 @@ const WorkSlider = () => {
     arrows: true,
     autoplay: true,
     speed: 500,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 6000,
   };
 
   return (

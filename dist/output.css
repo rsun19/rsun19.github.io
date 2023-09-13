@@ -997,19 +997,21 @@ video {
 
 .carousel-container .slick-next {
   z-index: 999;
-  right: 15px;
+  right: 2%;
+  margin-right: 20px;
 }
 
 .carousel-container .slick-prev {
   z-index: 999;
-  left: 15px;
+  left: 2%;
 }
 
 .carousel-container .slick-prev::before,
 .carousel-container .slick-next::before {
   font-size: 40px;
   color: black;
-  size: 40px;
+  /* size: 40px; */
+  /* margin-right: 1rem; */
 }
 
 .floating-action-button {
@@ -1022,15 +1024,15 @@ video {
 }
 
 @media only screen and (max-width: 800px) {
-  .carousel-container .slick-next {
-    z-index: 999;
-    right: 5px;
-  }
-
-  .carousel-container .slick-prev {
-    z-index: 999;
-    left: 5px;
-  }
+  /* .carousel-container .slick-next {
+        z-index: 999;
+        right: 5px; 
+    }
+    
+    .carousel-container .slick-prev {
+        z-index: 999;
+        left: 5px;
+    } */
 
   .typingSize {
     font-size: 30px !important;
@@ -1048,6 +1050,20 @@ video {
 @media only screen and (min-width: 1450px) {
   .imageStyle {
     bottom: 42.5% !important;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .carousel-container .slick-next {
+    z-index: 999;
+    right: 2%;
+    margin-right: 30px;
+  }
+
+  .carousel-container .slick-prev::before,
+    .carousel-container .slick-next::before {
+    font-size: 50px;
+    color: black;
   }
 }
 
