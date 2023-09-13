@@ -25,7 +25,7 @@ const Home = () => {
         });
     }
     const [reviewsData, setReviewsData] = useState([]);
-    const md = useWidth();
+    const { md, twoxl } = useWidth();
     const smH = useHeight();
 
     useEffect(() => {
@@ -115,19 +115,23 @@ const Home = () => {
                   <br />
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px'}}>
                     <a target='_blank' href="https://www.linkedin.com/in/rob-sun/" style={{ marginRight: '10px', color: 'white' }}>
-                        <i className="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                        {!twoxl && <i className="fa fa-linkedin fa-2x" aria-hidden="true"></i>}
+                        {twoxl && <i className="fa fa-linkedin fa-3x" aria-hidden="true"></i>}
                     </a>
 
                     <a target='_blank' href="mailto:robertssun1234@gmail.com" style={{ marginRight: '10px', color: 'white' }}>
-                        <i className="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                        {!twoxl && <i className="fa fa-envelope fa-2x" aria-hidden="true"></i>}
+                        {twoxl && <i className="fa fa-envelope fa-3x" aria-hidden="true"></i>}
                     </a>
 
                     <a target='_blank' href="https://docs.google.com/document/d/1xIxCOk0GNFJ-5rsPaYgbL90n1iOf3J7O6YzK6uhAuu4" style={{ marginRight: '10px', color: 'white' }}>
-                        <i className="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i>
+                        {!twoxl && <i className="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i>}
+                        {twoxl && <i className="fa fa-file-pdf-o fa-3x" aria-hidden="true"></i>}
                     </a>
 
                     <a target='_blank' href="https://github.com/rsun19" style={{ color: 'white' }}>
-                        <i className="fa fa-github fa-2x" aria-hidden="true"></i>
+                        {!twoxl && <i className="fa fa-github fa-2x" aria-hidden="true"></i>}
+                        {twoxl && <i className="fa fa-github fa-3x" aria-hidden="true"></i>}
                     </a>
                  </div>
                 </div>
