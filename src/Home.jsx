@@ -13,7 +13,7 @@ import useHeight from './changeHeight';
 import dark from './assets/dark.jpeg'
 import 'font-awesome/css/font-awesome.min.css';
 import WorkSlider from './WorkSlider';
-
+import profile from './assets/myImage.jpg'
 
 const Home = () => {
     useEffect(() => {
@@ -108,7 +108,10 @@ const Home = () => {
                 <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', width: '100%' }}> 
                   <p className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-white">Hi, I'm Robert.</p>                
                   <br />
-                  <br />
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px'}}>
+                    {!twoxl && <img class="w-28 h-28 p-1 rounded-full ring-2 ring-gray-300" style={{ objectFit: 'cover' }} src={profile} alt="Bordered avatar" />}
+                    {twoxl && <img class="w-40 h-40 p-1 rounded-full ring-2 ring-gray-300" style={{ objectFit: 'cover' }} src={profile} alt="Bordered avatar" />}
+                  </div>
                   <br />
                   <Typing />
                   <br />
