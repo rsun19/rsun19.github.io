@@ -8,14 +8,14 @@ const Typing = () => {
     "visionary.",
     "software dev.",
     "student.",
-    "book enjoyer.",
+    "book enthusiast.",
     "TV connoisseur.",
-    "salsero.",
+    "salsa dancer.",
     "firefighter.",
     "cyclist.",
     "leader.",
-    "hobbyist.",
-    "professional."
+    "language learner.",
+    "traveler."
   ];
 
   const delay = ms => new Promise(
