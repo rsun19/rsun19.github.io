@@ -12,6 +12,7 @@ import HobbySlider from './hobbySlider';
 import useHeight from './changeHeight';
 import dark from './assets/dark.jpeg'
 import 'font-awesome/css/font-awesome.min.css';
+import WorkSlider from './WorkSlider';
 
 
 const Home = () => {
@@ -144,6 +145,15 @@ const Home = () => {
                 >
                 {smH && <h1 className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl" style={{textAlign: 'center', color: 'white', paddingTop: '10px'}}>Portfolio</h1>}
                 <PortfolioSlider />
+              </FullpageSection>
+              <FullpageSection
+                    style={{
+                    backgroundColor: 'teal',
+                    padding: '1em',
+                    }}
+                >
+                <h1 className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl" style={{textAlign: 'center', color: 'white', paddingTop: '10px'}}>Work Experience</h1>
+                <WorkSlider />
               </FullpageSection>
               <FullpageSection
                     style={{

@@ -952,35 +952,6 @@ video {
   z-index: 999;
 }
 
-/*
-.background-hobbies {
-    background-image: url('path/to/your-image.jpg');
-  
-    background-size: cover;
-  
-    background-attachment: fixed;
-  
-    background-position: center center;
-  
-    background-color: #f0f0f0;
-  
-    height: 100vh;
-}
-
-.background-portfolio {
-    background-image: url('path/to/your-image.jpg');
-  
-    background-size: cover;
-  
-    background-attachment: fixed;
-  
-    background-position: center center;
-  
-    background-color: #f0f0f0;
-  
-    height: 100vh;
-} */
-
 #cursor {
   display: inline-block;
   width: 1px;
