@@ -35,7 +35,7 @@ const WorkSlider = () => {
     <Slider {...settings} className='carousel-container'>
       {portfolioItems.map((item) => (
         <div id={item.id} style={{ marginLeft: '40px', marginRight: '40px'}}>  
-            <div className="max-w-full rounded-lg overflow-hidden shadow-lg border">
+            <div className="max-w-full rounded-lg overflow-hidden">
                 <div className="bg-white">
                     <img src={item.photo} alt="Image" style={{ margin: 'auto', maxHeight: '50vh', width: 'auto'}} />
                 </div>

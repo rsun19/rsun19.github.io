@@ -44,7 +44,7 @@ const HobbySlider = () => {
             key={slide.id}
                 >
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <div className="rounded-lg overflow-hidden shadow-lg border">
+                    <div className="rounded-lg overflow-hidden shadow-lg">
                         <div style={{ padding: '20px' }}>
                             <img
                             src={slide.image}
