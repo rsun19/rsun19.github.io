@@ -14,6 +14,8 @@ import dark from './assets/dark.jpeg'
 import 'font-awesome/css/font-awesome.min.css';
 import WorkSlider from './WorkSlider';
 import profile from './assets/myImage.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     useEffect(() => {
@@ -25,6 +27,12 @@ const Home = () => {
             behavior: 'smooth'
         });
     }
+    const scrollDown = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    };
     const [reviewsData, setReviewsData] = useState([]);
     const { md, twoxl } = useWidth();
     const smH = useHeight();
@@ -84,14 +92,12 @@ const Home = () => {
                  </div> }
                 <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', width: '100%' }}> 
                   <p className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-white">Hi, I'm Robert.</p>                
-                  <br />
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px'}}>
                     {!twoxl && <img class="w-28 h-28 p-1 rounded-full ring-2 ring-gray-300" style={{ objectFit: 'cover' }} src={profile} alt="Bordered avatar" />}
                     {twoxl && <img class="w-40 h-40 p-1 rounded-full ring-2 ring-gray-300" style={{ objectFit: 'cover' }} src={profile} alt="Bordered avatar" />}
                   </div>
                   <br />
                   <Typing />
-                  <br />
                   <br />
                   <br />
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px'}}>
@@ -115,6 +121,11 @@ const Home = () => {
                         {twoxl && <i className="fa fa-github fa-3x" aria-hidden="true"></i>}
                     </a>
                  </div>
+                </div>
+                <div style={{ position: 'absolute', left: '50%', top: '70vh', transform: 'translateX(-50%)', textAlign: 'center', width: '100%' }}> 
+                    <button onClick={scrollDown}>
+                        <FontAwesomeIcon icon={faChevronDown} style={{color: 'white', fontSize: '40px'}} />
+                    </button>
                 </div>
               </FullpageSection>
               <FullpageSection
