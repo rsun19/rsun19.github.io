@@ -16,6 +16,7 @@ import WorkSlider from './WorkSlider';
 import profile from './assets/myImage.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import ChatBot from './ChatBot';
 
 const Home = () => {
     useEffect(() => {
@@ -127,6 +128,16 @@ const Home = () => {
                         <FontAwesomeIcon icon={faChevronDown} style={{color: 'white', fontSize: '40px'}} />
                     </button>
                 </div>
+              </FullpageSection>
+              <FullpageSection
+                    style={{
+                    backgroundColor: 'teal',
+                    padding: '1em',
+                    }}
+                >
+                {md && <h1 className="text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl 3xl:mb-10 5xl:text-7xl" style={{textAlign: 'center', color: 'white', paddingTop: '10px'}}>Ask the Chat Bot about my experiences and skip the resume! Or, scroll down. Either way is fine by me!</h1>}
+                {!md && <h1 className="text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl 3xl:mb-10 5xl:text-7xl" style={{textAlign: 'center', color: 'white', paddingTop: '10px'}}>Ask the Chat Bot about my experiences and skip the resume! Or, scroll down.</h1>}
+                <ChatBot />
               </FullpageSection>
               <FullpageSection
                     style={{
