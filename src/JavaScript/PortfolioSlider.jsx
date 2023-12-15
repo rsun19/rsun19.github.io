@@ -5,8 +5,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import tripPlanner from "./assets/tripPlanner.jpg";
 import bookBlog from "./assets/bookBlog.jpg";
 import jokeGenerator from "./assets/jokeGenerator.jpg";
-import recycleAI from "./assets/recycleAI.jpg";
-import myHealth from "./assets/Health App.jpg";
+import recycleAI from ".././assets/recycleAI.jpg";
+import myHealth from ".././assets/Health App.jpg";
 import useHeight from './changeHeight';
 
 const PortfolioSlider = () => {

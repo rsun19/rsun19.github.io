@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import hiking from './assets/hiking.jpg'
 import salsa from './assets/salsa.png'
 import fire from './assets/hosePour.jpg'
-import Typing from './Typing';
+import Typing from './Typing.jsx';
 import useWidth from './changeWidth.js';
 import Fullpage, { FullPageSections, FullpageSection, FullpageCount, FullpageNavigation, FullpageContext } from '@ap.cx/react-fullpage'
-import PortfolioSlider from './PortfolioSlider';
+import PortfolioSlider from './PortfolioSlider.jsx';
 import HobbySlider from './hobbySlider';
 import useHeight from './changeHeight';
 import dark from './assets/dark.jpeg'
 import 'font-awesome/css/font-awesome.min.css';
-import WorkSlider from './WorkSlider';
+import WorkSlider from './WorkSlider.jsx';
 import profile from './assets/myImage.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
