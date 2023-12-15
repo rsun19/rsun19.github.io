@@ -1,3 +1,6 @@
+# Notes:
+I have recently migrated the codebase to TypeScript. You will see a TypeScript and JavaScript folder, but only the TypeScript folder is up to date!
+
 # Website:
 
 - https://rsun19.github.io/portfoliodev/
