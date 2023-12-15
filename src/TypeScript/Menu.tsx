@@ -1,5 +1,5 @@
-import { motion, useScroll, useSpring, Variants } from "framer-motion"
-import React, { useState } from 'react';
+import { motion, Variants } from "framer-motion"
+import { useState } from 'react';
 
 const itemVariants: Variants = {
     open: {

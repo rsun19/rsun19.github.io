@@ -1,19 +1,15 @@
-import React, { useEffect, useState, Component } from 'react';
+import { useEffect, useState } from 'react';
 import Typing from './Typing';
 import useWidth from './changeWidth';
 // import Fullpage, { FullPageSections, FullpageSection, FullpageCount, FullpageNavigation, FullpageContext } from '@ap.cx/react-fullpage'
 import PortfolioSlider from './PortfolioSlider';
 import useHeight from './changeHeight';
-import dark from '.././assets/dark.jpeg'
 import 'font-awesome/css/font-awesome.min.css';
 import WorkSlider from './WorkSlider';
 import profile from '.././assets/myImage.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import ChatBot from './ChatBot';
-import { motion, useScroll, useSpring, Variants } from "framer-motion"
-import Menu from './Menu';
-import mountains from '.././assets/mountains.jpeg';
+import { motion, useScroll } from "framer-motion"
+// import Menu from './Menu';
 
 interface Review {
     id: string;
