@@ -15,4 +15,6 @@
 
 5. In subsequent steps, steps 2 (if want to edit css), 3, and 4 are mandatory.
 
-6. Happy coding! Put a PR if you want to contribute!
+6. Happy coding!
+
+7. If you want to deploy onto Github Pages, you will have to do something with ```npm run deploy```
