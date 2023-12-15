@@ -10,10 +10,10 @@ import Fullpage, { FullPageSections, FullpageSection, FullpageCount, FullpageNav
 import PortfolioSlider from './PortfolioSlider.jsx';
 import HobbySlider from './hobbySlider';
 import useHeight from './changeHeight';
-import dark from './assets/dark.jpeg'
+import dark from '.././assets/dark.jpeg'
 import 'font-awesome/css/font-awesome.min.css';
 import WorkSlider from './WorkSlider.jsx';
-import profile from './assets/myImage.jpg'
+import profile from '..././assets/myImage.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import ChatBot from './ChatBot';

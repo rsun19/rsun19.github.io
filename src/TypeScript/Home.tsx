@@ -72,7 +72,7 @@ const Home = () => {
 
         return (
             <>
-            <div style={{ background: 'lightgray' }}>
+            <div style={{ background: '#D3D3D3' }}>
             <motion.div
                 className="progress-bar"
                 style={{ scaleX: scrollYProgress }}
