@@ -16,7 +16,7 @@ const WorkSlider = () => {
     const portfolioItems: portfolioItem[] = [
         {
             id: "1",
-            title: "Software Engineering Intern At Red Hat",
+            title: "Software Engineer Intern At Red Hat",
             photo: redhat,
             description: "Worked on the console.redhat.com website using TypeScript, Go, React, and Cypress.",
         },
