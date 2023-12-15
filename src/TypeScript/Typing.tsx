@@ -49,7 +49,7 @@ const Typing = () => {
 
   return (
     <div>
-      <span className="mr-0.5 text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl 5xl:text-8xl" style={{ color: 'white' }}>I'm a {text}</span>
+      <span className="mr-0.5 text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl 5xl:text-8xl" style={{ color: 'black' }}>I'm a {text}</span>
       <span id="cursor"></span>
     </div>
   );

@@ -23,8 +23,8 @@ const WorkSlider = () => {
         {
             id: "2",
             photo: uva1,
-            title: "Computer Science Teaching Assistant at University of Virginia",
-            description: "Graded assignments, held office hours, and answered questions on Piazza for a class of over 440 students.",
+            title: "CS Teaching Assistant at University of Virginia",
+            description: "Graded assignments and held office hours for a class of over 440 students.",
         },
     ];
 

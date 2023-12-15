@@ -2,28 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.background-first {
-    background-image: url('./assets/dark.jpeg');
-  
-    background-size: cover;
-  
-    background-attachment: fixed;
-  
-    background-position: center center;
-  
-    background-color: #f0f0f0;
-  
-    height: 80vh;
-
-    z-index: 999;
-}
-
 #cursor {
     display: inline-block;
     width: 1px;
     padding-left: 2px;
     height: 35px;
-    background-color: white;
+    background-color: black;
     animation: blink-caret 0.75s infinite;
   }
   
@@ -113,3 +97,19 @@
     color: black; 
     }
 }
+
+.progress-bar {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: red;
+    transform-origin: 0%;
+}
+
+.menu {
+    filter: drop-shadow(1px 1px 1px #4700b3);
+    width: 300px;
+  }

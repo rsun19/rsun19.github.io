@@ -31,7 +31,7 @@ const ChatBot = () => {
 
     return (
         <div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center" style={{ marginLeft: '2rem', marginRight: '2rem' }}>
                 {md && <div className={'p-3 max-w-xl rounded overflow-hidden shadow-lg sm:mt-5 mt-2 text-center sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl text-sm'} style={{ backgroundColor: 'lightblue' }}>
                 {response.split('\n').map((line, index) => (
                     <React.Fragment key={index}>
@@ -51,7 +51,7 @@ const ChatBot = () => {
                 ))}
                 </div>}
             </div>
-            <div className="flex items-center justify-center mt-5">
+            <div className="flex items-center justify-center mt-5" style={{ marginLeft: '1rem', marginRight: '1rem' }}>
                 <input
                     type="text"
                     className="border border-gray-300 rounded-l-lg px-4 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl text-sm"
