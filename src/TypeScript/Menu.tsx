@@ -1,75 +1,58 @@
-import { motion, Variants } from "framer-motion"
-import { useState } from 'react';
+import { useState } from "react";
 
-const itemVariants: Variants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 }
-    },
-    closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
-  };
 
 const Menu = () => {
+  const [page, setPage] = useState(0);
 
-    const [isOpen, setIsOpen] = useState(false);
+  const navigatePage = (pageNum: number) => {
+    const firstPage = document.getElementById("first-page");
+    const secondPage = document.getElementById("second-page");
+    const thirdPage = document.getElementById("third-page");
+    const handle = document.getElementById("handle");
+    setPage(pageNum);
+    if (pageNum == 0 && handle && firstPage) {
+      const firstPageWidth = firstPage.offsetWidth;
+      handle.style.marginLeft = '0%';
+      if (firstPageWidth) {
+        handle.style.width = (firstPageWidth+36).toString() + 'px';
+      }
+    } else if (pageNum == 1 && handle && secondPage) {
+      const secondPageWidth = secondPage.offsetWidth;
+      handle.style.marginLeft = '27%';
+      if (secondPageWidth) {
+        handle.style.width = (secondPageWidth + 22).toString() + 'px';
+      }
+    } else if (pageNum == 2 && handle && thirdPage) {
+      const thirdPageWidth = thirdPage.offsetWidth;
+      handle.style.marginLeft = '55%';
+      if (thirdPageWidth) {
+        handle.style.width = (thirdPageWidth + 40).toString() + 'px';
+      }
+    }
+  }
 
-    return (
-        <>
-            <motion.nav
-      initial={false}
-      animate={isOpen ? "open" : "closed"}
-    >
-      <motion.button
-        whileTap={{ scale: 0.97 }}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        Menu
-        <motion.div
-          variants={{
-            open: { rotate: 180 },
-            closed: { rotate: 0 }
-          }}
-          transition={{ duration: 0.2 }}
-          style={{ originY: 0.55 }}
-        >
-          <svg width="15" height="15" viewBox="0 0 20 20">
-            <path d="M0 7 L 20 7 L 10 16" />
-          </svg>
-        </motion.div>
-      </motion.button>
-      <motion.ul
-        variants={{
-          open: {
-            clipPath: "inset(0% 0% 0% 0% round 10px)",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.7,
-              delayChildren: 0.3,
-              staggerChildren: 0.05
-            }
-          },
-          closed: {
-            clipPath: "inset(10% 50% 90% 50% round 10px)",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.3
-            }
-          }
-        }}
-        style={{ pointerEvents: isOpen ? "auto" : "none" }}
-      >
-        <motion.li variants={itemVariants}>Item 1 </motion.li>
-        <motion.li variants={itemVariants}>Item 2 </motion.li>
-        <motion.li variants={itemVariants}>Item 3 </motion.li>
-        <motion.li variants={itemVariants}>Item 4 </motion.li>
-        <motion.li variants={itemVariants}>Item 5 </motion.li>
-        </motion.ul>
-        </motion.nav>
-        </>
-    );
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="mb-5">
+      <div page-num={page} className="switch">
+        <div id="handle" />
+        <a href="#" id="first-page" onClick={() => navigatePage(0)}>
+          Home
+        </a>
+        <a href="#portfolio" id="second-page" onClick={() => navigatePage(1)}>
+          Portfolio
+        </a>
+        <a href="#WorkXP" id="third-page" onClick={() => navigatePage(2)}>
+          Experience
+        </a>
+      </div>
+    </div>
+  );
 };
+
+// const spring = {
+//   type: "spring",
+//   stiffness: 700,
+//   damping: 30
+// };
 
 export default Menu;

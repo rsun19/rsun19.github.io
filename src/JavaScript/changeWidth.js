@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useWidth = () => {
   const [md, setMd] = useState(window.innerWidth >= 850);
@@ -9,14 +9,14 @@ const useWidth = () => {
       setMd(window.innerWidth >= 850);
       set2xl(window.innerWidth >= 2000);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  return {md, twoxl};
+  return { md, twoxl };
 };
 
 export default useWidth;

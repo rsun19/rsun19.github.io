@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useHeight = () => {
   const [smH, setSMH] = useState(window.innerHeight >= 650);
@@ -7,10 +7,10 @@ const useHeight = () => {
     const handleResize = () => {
       setSMH(window.innerHeight >= 650);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

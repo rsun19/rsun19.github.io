@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './TypeScript/App';
-import { HashRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./TypeScript/App";
+import { HashRouter } from "react-router-dom";
 
-const ele = document.getElementById('root');
+const ele = document.getElementById("root");
 
 if (ele) {
   const root = ReactDOM.createRoot(ele);
@@ -13,7 +13,7 @@ if (ele) {
       <HashRouter>
         <App />
       </HashRouter>
-    </React.StrictMode>
+    </React.StrictMode>,
   );
 }
 

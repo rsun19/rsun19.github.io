@@ -15,41 +15,50 @@ const Typing = () => {
     "cyclist.",
     "leader.",
     "language learner.",
-    "traveler."
+    "traveler.",
   ];
 
-  const delay = (ms: number) => new Promise(
-    resolve => setTimeout(resolve, ms)
-  );
+  const delay = (ms: number) =>
+    new Promise((resolve) => setTimeout(resolve, ms));
 
   useEffect(() => {
-    const typingInterval: number = setInterval(async () => {
-      if (isTyping) {
-        if (text.length < words[wordIndex].length) {
-          setText(prevText => words[wordIndex].slice(0, prevText.length + 1));
+    const typingInterval: number = setInterval(
+      async () => {
+        if (isTyping) {
+          if (text.length < words[wordIndex].length) {
+            setText((prevText) =>
+              words[wordIndex].slice(0, prevText.length + 1),
+            );
+          } else {
+            await delay(500);
+            setIsTyping(false);
+          }
         } else {
-          await delay(500);
-          setIsTyping(false);
+          if (text.length > 0) {
+            setText((prevText) => prevText.slice(0, prevText.length - 1));
+          } else {
+            setWordIndex((prevIndex) => {
+              const newIndex = (prevIndex + 1) % words.length;
+              return newIndex;
+            });
+            setIsTyping(true);
+          }
         }
-      } else {
-        if (text.length > 0) {
-          setText(prevText => prevText.slice(0, prevText.length - 1));
-        } else {
-          setWordIndex(prevIndex => {
-          const newIndex = (prevIndex + 1) % words.length
-          return newIndex;
-          });
-          setIsTyping(true);
-        }
-      }
-    }, isTyping ? 125 : 75) as unknown as number;
+      },
+      isTyping ? 125 : 75,
+    ) as unknown as number;
 
     return () => clearInterval(typingInterval);
   }, [text, isTyping, wordIndex, words]);
 
   return (
     <div>
-      <span className="mr-0.5 text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl 5xl:text-8xl" style={{ color: 'black' }}>I'm a {text}</span>
+      <span
+        className="mr-0.5 text-4xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl 5xl:text-7xl"
+        style={{ color: "black" }}
+      >
+        I'm a {text}
+      </span>
       <span id="cursor"></span>
     </div>
   );
