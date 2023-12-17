@@ -69,18 +69,7 @@ const PortfolioSlider = () => {
       title: "Joke Generator with Swift, React, and Flask",
       description:
         "Developed a joke generator. I used React for the web component, and Swift for the iMessage extension component. For the backend, I used Flask and Postgres, and served API content.",
-      links: [
-        {
-          id: "1",
-          link: "https://robertssun.me/jokegenerator",
-          name: "View website",
-        },
-        {
-          id: "2",
-          link: "https://testflight.apple.com/join/DHtgfi6C",
-          name: "Beta test app",
-        },
-      ],
+      links: [],
     },
     {
       id: "4",
