@@ -1,8 +1,30 @@
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 
 const Menu = () => {
   const [page, setPage] = useState(0);
+
+  const arrangeMenu = () => {
+    const portfolioDiv = document.getElementById('search');
+    const workXpDiv = document.getElementById('WorkXP')
+    if (portfolioDiv && workXpDiv) {
+      const portfolioBorder = portfolioDiv.getBoundingClientRect();
+      const workBorder = workXpDiv.getBoundingClientRect();
+      if (workBorder.top <= 0) {
+        navigatePage(2);
+      } else if (portfolioBorder.top <= 0) {
+        console.log(portfolioBorder.top);
+        navigatePage(1);
+      } else {
+        navigatePage(0);
+      }
+    }
+  }
+
+  const handleScroll = () => {
+    arrangeMenu();
+  }
 
   const navigatePage = (pageNum: number) => {
     const firstPage = document.getElementById("first-page");
@@ -31,6 +53,14 @@ const Menu = () => {
     }
   }
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  });
+
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="mb-5">
       <div page-num={page} className="switch">
@@ -48,11 +78,5 @@ const Menu = () => {
     </div>
   );
 };
-
-// const spring = {
-//   type: "spring",
-//   stiffness: 700,
-//   damping: 30
-// };
 
 export default Menu;

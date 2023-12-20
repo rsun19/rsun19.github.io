@@ -120,7 +120,7 @@
 }
 
 .switch {
-  background-color: white;
+  background-color: darkgrey;
   display: flex;
   border-radius: 50px;
   gap: 20px;
@@ -130,6 +130,7 @@
   height: 40px;
   padding: 20px;
   z-index: 999999;
+  color: white
 }
 
 #handle {
@@ -137,7 +138,7 @@
   width: 79px;
   border-radius: 40px;
   position: absolute;
-  border:turquoise 3px solid;
+  border:white 3px solid;
   top: 0;
   left: 0;
   margin-left: 0%;

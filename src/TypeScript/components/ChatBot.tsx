@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import useWidth from "./changeWidth";
+import useWidth from "../hooks/changeWidth";
+import Portfolio from "[DEPRECATED] JavaScript/Portfolio";
 
 const ChatBot = () => {
   const [response, setResponse] = useState(
-    'This is an experimental model. Just pretend that AI is me!\nExample queries include: "What are your experiences? or Expand on your experiences at Red Hat"',
+    'This is an experimental model. Just pretend that AI is me!\nExample queries include: "What are your experiences? or Expand on your experiences at Red Hat"\nNote that any unknown/unanticipated queries will be sent to the Chat GPT API',
   );
   const [searchTerm, setSearchTerm] = useState("");
   const { md } = useWidth();
@@ -70,7 +71,8 @@ const ChatBot = () => {
           </div>
         )}
       </div>
-      <div id="portfolio"
+      <div
+        id="search"
         className="flex items-center justify-center mt-5"
         style={{ marginLeft: "1rem", marginRight: "1rem" }}
       >
