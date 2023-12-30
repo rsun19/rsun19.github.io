@@ -74,7 +74,7 @@ const Home = () => {
 
   return (
     <>
-      <div style={{ background: "#D3D3D3" }}>
+      <div id="homeTop" style={{ background: "#D3D3D3" }}>
         <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
@@ -385,6 +385,21 @@ const Home = () => {
             ))}
           </ul>
         </div>
+        <br />
+        <br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
       </div>

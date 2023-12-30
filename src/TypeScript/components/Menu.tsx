@@ -6,15 +6,16 @@ const Menu = () => {
   const [page, setPage] = useState(0);
 
   const arrangeMenu = () => {
+    const homeDiv = document.getElementById('homeTop');
     const portfolioDiv = document.getElementById('portfolio');
     const workXpDiv = document.getElementById('WorkXP')
-    if (portfolioDiv && workXpDiv) {
+    if (homeDiv && portfolioDiv && workXpDiv) {
+      const homeBorder = homeDiv.getBoundingClientRect();
       const portfolioBorder = portfolioDiv.getBoundingClientRect();
       const workBorder = workXpDiv.getBoundingClientRect();
-      if (workBorder.top <= 0) {
+      if (portfolioBorder.top < 0 && -(portfolioBorder.top) >= workBorder.top) {
         navigatePage(2);
-      } else if (portfolioBorder.top <= 0) {
-        console.log(portfolioBorder.top);
+      } else if (homeBorder.top < 0 && -(homeBorder.top) >= portfolioBorder.top) {
         navigatePage(1);
       } else {
         navigatePage(0);
