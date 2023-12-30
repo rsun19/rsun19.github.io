@@ -6,7 +6,7 @@ const Menu = () => {
   const [page, setPage] = useState(0);
 
   const arrangeMenu = () => {
-    const portfolioDiv = document.getElementById('search');
+    const portfolioDiv = document.getElementById('portfolio');
     const workXpDiv = document.getElementById('WorkXP')
     if (portfolioDiv && workXpDiv) {
       const portfolioBorder = portfolioDiv.getBoundingClientRect();
