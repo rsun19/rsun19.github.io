@@ -70,7 +70,7 @@ const ChatBot = () => {
           </div>
         )}
       </div>
-      <div id="portfolio"
+      <div
         className="flex items-center justify-center mt-5"
         style={{ marginLeft: "1rem", marginRight: "1rem" }}
       >

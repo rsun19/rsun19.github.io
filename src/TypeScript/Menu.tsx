@@ -10,19 +10,19 @@ const Menu = () => {
     const thirdPage = document.getElementById("third-page");
     const handle = document.getElementById("handle");
     setPage(pageNum);
-    if (pageNum == 0 && handle && firstPage) {
+    if (pageNum === 0 && handle && firstPage) {
       const firstPageWidth = firstPage.offsetWidth;
       handle.style.marginLeft = '0%';
       if (firstPageWidth) {
         handle.style.width = (firstPageWidth+36).toString() + 'px';
       }
-    } else if (pageNum == 1 && handle && secondPage) {
+    } else if (pageNum === 1 && handle && secondPage) {
       const secondPageWidth = secondPage.offsetWidth;
       handle.style.marginLeft = '27%';
       if (secondPageWidth) {
         handle.style.width = (secondPageWidth + 22).toString() + 'px';
       }
-    } else if (pageNum == 2 && handle && thirdPage) {
+    } else if (pageNum === 2 && handle && thirdPage) {
       const thirdPageWidth = thirdPage.offsetWidth;
       handle.style.marginLeft = '55%';
       if (thirdPageWidth) {

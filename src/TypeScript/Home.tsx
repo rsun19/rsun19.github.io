@@ -10,6 +10,7 @@ import profile from ".././assets/myImage.jpg";
 import ChatBot from "./ChatBot";
 import { motion, useScroll } from "framer-motion";
 import Menu from "./Menu";
+import Model from "./Model";
 
 interface Review {
   id: string;
@@ -299,6 +300,7 @@ const Home = () => {
           </div>
         </div>
         <br />
+        {/* <Model />
         {md && (
           <h1
             className="text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl 3xl:mb-10 5xl:text-7xl"
@@ -328,9 +330,10 @@ const Home = () => {
             Ask the Chat Bot about my experiences and skip the resume! Or,
             scroll down.
           </h1>
-        )}
-        <ChatBot />
+        )} */}
+        {/* <ChatBot /> */}
         <h1
+          id="portfolio"
           className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl"
           style={{ textAlign: "center", color: "black", paddingTop: "10px" }}
         >
