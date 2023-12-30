@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import Typing from "./Typing";
-import useWidth from "./changeWidth";
-// import Fullpage, { FullPageSections, FullpageSection, FullpageCount, FullpageNavigation, FullpageContext } from '@ap.cx/react-fullpage'
+import useWidth from "../hooks/changeWidth";
 import PortfolioSlider from "./PortfolioSlider";
-import useHeight from "./changeHeight";
+import useHeight from "../hooks/changeHeight";
 import "font-awesome/css/font-awesome.min.css";
 import WorkSlider from "./WorkSlider";
-import profile from ".././assets/myImage.jpg";
+import profile from "../.././assets/myImage.jpg";
 import ChatBot from "./ChatBot";
 import { motion, useScroll } from "framer-motion";
 import Menu from "./Menu";
@@ -33,12 +32,14 @@ const Home = () => {
       behavior: "smooth",
     });
   };
+
   const scrollDown = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: "smooth",
     });
   };
+
   const [reviewsData, setReviewsData] = useState<Review[]>([]);
   const { md, twoxl } = useWidth();
   const smH = useHeight();
@@ -78,9 +79,7 @@ const Home = () => {
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
         />
-        <br />
-        <br />
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", paddingTop: '3rem'}}>
           <Menu />
         </div>
         {md && (
@@ -122,7 +121,7 @@ const Home = () => {
         {!md && (
           <div
             className="alert-viewer"
-            style={{ marginLeft: "1rem", marginRight: "1rem", marginTop: '3rem'}}
+            style={{ marginLeft: "1rem", marginRight: "1rem", paddingTop: '2rem'}}
           >
             <a
               href="https://robertsrandomreviews.com/"

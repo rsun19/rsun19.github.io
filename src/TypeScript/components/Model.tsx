@@ -1,5 +1,5 @@
 import React, { useEffect, useState, ChangeEvent } from 'react';
-import testImg from '.././assets/car-highway.jpeg';
+import testImg from '../.././assets/car-highway.jpeg';
 
 const Model: React.FC = () => {
   const [image, setImage] = useState<File | null>(null);
