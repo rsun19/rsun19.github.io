@@ -27,17 +27,28 @@ const Beginning = () => {
       if (!isMidToggled){
         const page = document.getElementById('home-page');
         if (page) {
-          console.log("found")
           page.classList.toggle('show');
-          console.log(page.classList);
           isMidToggled = true;
+          const app = document.getElementById('App');
+          const progressBar = document.getElementById('progress-bar');
+          if (app && progressBar) {
+            page.addEventListener('transitionend', () => {
+              setTimeout(() => {
+                page.style.transition = 'none';
+                page.style.transform = 'none';
+                app.style.overflow = 'visible';
+                progressBar.style.display = 'block';
+                window.scrollBy(0, 1);
+              }, 0);
+            });
+          }
         }
       }
     }   
 
     return (
       <div>
-        {/* <div style={{ zIndex: '5', background: "#D3D3D3" }}>
+        <div style={{ position: 'relative', background: "#D3D3D3" }}>
           <Home />
         </div>
         {!finishAnimation && <div style={{ margin: '0px', padding: '0px'}}>
@@ -55,8 +66,7 @@ const Beginning = () => {
             </Canvas>
           </div>
           </div>
-        </div>} */}
-        <Home />
+        </div>}
       </div>
       );
 };

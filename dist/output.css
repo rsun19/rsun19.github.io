@@ -1138,7 +1138,7 @@ video {
   gap: 20px;
   align-items: center;
   justify-items: auto;
-  position: fixed;
+  position: fixed !important;
   height: 40px;
   padding: 20px;
   z-index: 999999;
@@ -1168,7 +1168,8 @@ video {
   transition: -webkit-transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
   transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
-  z-index: 99;
+  z-index: 5;
+  /* overflow-x: hidden; */
 }
 
 .show {

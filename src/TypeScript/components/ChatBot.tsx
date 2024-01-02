@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import useWidth from "../hooks/changeWidth";
-import Portfolio from "[DEPRECATED] JavaScript/Portfolio";
 
 const ChatBot = () => {
   const [response, setResponse] = useState(

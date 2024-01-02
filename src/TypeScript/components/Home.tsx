@@ -9,6 +9,7 @@ import profile from "../.././assets/myImage.jpg";
 import ChatBot from "./ChatBot";
 import { motion, useScroll } from "framer-motion";
 import Menu from "./Menu";
+import Model from "./Model";
 
 interface Review {
   id: string;
@@ -72,12 +73,12 @@ const Home = () => {
   }, []);
 
   return (
-    //{ /*<div id='home-page' className='page-transition' style={{ background: "#D3D3D3" }}> */}
-    <div id="homeTop" style={{ background: "#D3D3D3" }}>
-      <div>
+    <div id='home-page' className='page-transition'>
+      <div id="homeTop" style={{ background: "#D3D3D3" }}>
         <motion.div
+          id = "progress-bar"
           className="progress-bar"
-          style={{ scaleX: scrollYProgress }}
+          style={{ scaleX: scrollYProgress, display: 'none' }}
         />
         <div style={{ textAlign: "center", paddingTop: '3rem'}}>
           <Menu />
@@ -299,7 +300,7 @@ const Home = () => {
           </div>
         </div>
         <br />
-        {/* 
+        {/* <Model />
         {md && (
           <h1
             className="text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl 3xl:mb-10 5xl:text-7xl"
