@@ -72,8 +72,9 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <div style={{ background: "#D3D3D3" }}>
+    //{ /*<div id='home-page' className='page-transition' style={{ background: "#D3D3D3" }}> */}
+    <div id="homeTop" style={{ background: "#D3D3D3" }}>
+      <div>
         <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
@@ -298,6 +299,7 @@ const Home = () => {
           </div>
         </div>
         <br />
+        {/* 
         {md && (
           <h1
             className="text-md lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl 3xl:mb-10 5xl:text-7xl"
@@ -327,8 +329,8 @@ const Home = () => {
             Ask the Chat Bot about my experiences and skip the resume! Or,
             scroll down.
           </h1>
-        )}
-        <ChatBot />
+        )} */}
+        {/* <ChatBot /> */}
         <h1
           id="portfolio"
           className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl"
@@ -386,7 +388,7 @@ const Home = () => {
         <br />
         <br />
       </div>
-    </>
+    </div>
   );
 };
 
