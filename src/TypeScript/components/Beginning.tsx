@@ -58,7 +58,8 @@ const Beginning = () => {
             </button>
           <div style={{ height: '100vh', width: '100vw', margin: '0px', padding: '0px'}}>
             <Canvas>
-                <Environment files="./portfoliodev/farm_field_puresky_1k.hdr" background/>
+                {/* add full path for development */}
+                <Environment files="./farm_field_puresky_1k.hdr" background/>
                 {click && <Suspense fallback={null}>
                     <Model onAnimationFinish={finishAnimationChange} onMidwayFinish={finishMidFunc} start={click}/>
                     <OrbitControls />
