@@ -4,7 +4,6 @@ import { Canvas } from '@react-three/fiber'
 import Model from './Model';
 import { Environment, OrbitControls } from '@react-three/drei';
 import Home from './Home';
-import { Html, useProgress } from '@react-three/drei';
 
 const Beginning = () => {
     const [click, setClick] = useState(false);
@@ -14,10 +13,6 @@ const Beginning = () => {
         if (portfolioButton) {
             portfolioButton.style.display = 'none';
         }
-    }
-
-    function Loader() {
-      return <Html center className=' p-3 bg-white rounded-lg font-bold text-xl'>Loading... </Html>
     }
 
     let isMidToggled = false;
@@ -65,7 +60,7 @@ const Beginning = () => {
             <Canvas>
                 {/* add full path for development */}
                 <Environment files="./farm_field_puresky_1k.hdr" background/>
-                <Suspense fallback={<Loader />}>
+                <Suspense fallback={null}>
                     {click && <Model onAnimationFinish={finishAnimationChange} onMidwayFinish={finishMidFunc} start={click}/>}
                     <OrbitControls />
                 </Suspense>
