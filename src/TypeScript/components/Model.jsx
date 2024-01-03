@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useLoader, useThree } from '@react-three/fiber';
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import * as THREE from 'three'
 
 const Model = ({ onAnimationFinish, onMidwayFinish, start }) => {
     const meshModel = useRef();
@@ -19,6 +20,30 @@ const Model = ({ onAnimationFinish, onMidwayFinish, start }) => {
     }
 
     let halfway = false;
+
+    /*
+    https://stackoverflow.com/questions/63936267/how-to-extract-and-play-animation-in-react-three-fiber
+    */
+    let mixer;
+    if (gltf.animations.length) {
+      mixer = new THREE.AnimationMixer(gltf.scene);
+      gltf.animations.forEach(clip => {
+        const action = mixer.clipAction(clip)
+        action.play();
+      });
+    }
+
+    useFrame((state, delta) => {
+      mixer?.update(delta)
+    })
+
+    gltf.scene.traverse(child => {
+      if (child.isMesh) {
+          child.castShadow = true
+          child.receiveShadow = true
+          child.material.side = THREE.FrontSide
+      }
+    })
 
     useFrame(() => {
       if (halfway && -viewport.width + 1 > meshModel.current.position.x) {
@@ -44,7 +69,7 @@ const Model = ({ onAnimationFinish, onMidwayFinish, start }) => {
 
     return (
         <mesh ref={meshModel} position={curPosition.position} rotation={curRotation.rotation}>
-          <primitive object={gltf.scene} scale={0.1} />
+          <primitive object={gltf.scene} scale={1.5} />
         </mesh>
       );
 }

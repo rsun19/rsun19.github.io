@@ -23,3 +23,9 @@ I have recently migrated the codebase to TypeScript. You will see a TypeScript a
 6. Happy coding!
 
 7. If you want to deploy onto Github Pages, you will have to do something with `npm run deploy`
+
+SOURCES:
+
+https://sketchfab.com/3d-models/cartoon-plane-f312ec9f87794bdd83630a3bc694d8ea
+
+https://polyhaven.com/a/farm_field_puresky
