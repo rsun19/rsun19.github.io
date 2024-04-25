@@ -1,8 +1,8 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import redhat from "../.././assets/redhat.webp";
-import uva1 from "../.././assets/uva1.jpeg";
+import redhat from "../assets/redhat.webp";
+import uva1 from "../assets/uva1.jpeg";
 
 interface portfolioItem {
   id: string;
@@ -47,7 +47,7 @@ const WorkSlider = () => {
             <div className="bg-white">
               <img
                 src={item.photo}
-                alt="Image"
+                alt="Images"
                 style={{ margin: "auto", maxHeight: "50vh", width: "auto" }}
               />
             </div>

@@ -1,11 +1,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import tripPlanner from "../.././assets/tripPlanner.jpg";
-import bookBlog from "../.././assets/bookBlog.jpg";
-import jokeGenerator from "../.././assets/jokeGenerator.jpg";
-import recycleAI from "../.././assets/recycleAI.jpg";
-import myHealth from "../.././assets/Health App.jpg";
+import tripPlanner from "../assets/tripPlanner.jpg";
+import bookBlog from "../assets/bookBlog.jpg";
+import jokeGenerator from "../assets/jokeGenerator.jpg";
+import recycleAI from "../assets/recycleAI.jpg";
+import myHealth from "../assets/Health App.jpg";
 import useHeight from "../hooks/changeHeight";
 
 interface link {
@@ -86,9 +86,8 @@ const PortfolioSlider = () => {
       description:
         "Developed a model using PyTorch that can classify recyclable items. I trained ResNet18's pre-trained model with thousands of images and the model is 84% accurate on the testing data.",
       links: [
-        { id: "1", link: "https://www.recycleai.tech/", name: "View website" },
         {
-          id: "2",
+          id: "1",
           link: "https://github.com/rsun19/RecycleImageClassifier_dev",
           name: "View source code",
         },
@@ -114,7 +113,7 @@ const PortfolioSlider = () => {
             <div className="bg-white">
               <img
                 src={item.photo}
-                alt="Image"
+                alt="Images"
                 style={{ margin: "auto", maxHeight: "50vh", width: "auto" }}
               />
             </div>
@@ -140,7 +139,7 @@ const PortfolioSlider = () => {
                             padding: "10px 0px",
                             color: "black",
                             textDecoration: "none",
-                          }}
+                          }} rel="noreferrer"
                         >
                           {link.name}
                         </a>
