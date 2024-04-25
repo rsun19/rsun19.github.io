@@ -66,7 +66,7 @@ const Menu = () => {
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="mb-5">
       <div page-num={page} className="switch">
         <div id="handle" />
-        <a href="#start" id="first-page" onClick={() => navigatePage(0)}>
+        <a href="#" id="first-page" onClick={() => navigatePage(0)}>
           Home
         </a>
         <a href="#portfolio" id="second-page" onClick={() => navigatePage(1)}>
