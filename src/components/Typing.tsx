@@ -4,24 +4,25 @@ const Typing = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState("");
-  const words = [
-    "visionary.",
-    "software dev.",
-    "student.",
-    "book enthusiast.",
-    "TV connoisseur.",
-    "salsa dancer.",
-    "firefighter.",
-    "cyclist.",
-    "leader.",
-    "language learner.",
-    "traveler.",
-  ];
 
   const delay = (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms));
 
   useEffect(() => {
+    const words = [
+      "visionary.",
+      "software dev.",
+      "student.",
+      "book enthusiast.",
+      "TV connoisseur.",
+      "salsa dancer.",
+      "firefighter.",
+      "cyclist.",
+      "leader.",
+      "language learner.",
+      "traveler.",
+    ];
+
     const typingInterval: number = setInterval(
       async () => {
         if (isTyping) {
@@ -49,7 +50,7 @@ const Typing = () => {
     ) as unknown as number;
 
     return () => clearInterval(typingInterval);
-  }, [text, isTyping, wordIndex, words]);
+  }, [text, isTyping, wordIndex]);
 
   return (
     <div>

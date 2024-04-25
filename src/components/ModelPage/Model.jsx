@@ -6,7 +6,8 @@ import * as THREE from 'three'
 
 const Model = ({ onAnimationFinish, onMidwayFinish, start }) => {
     const meshModel = useRef();
-    //for development: const gltf = useLoader(GLTFLoader, "./portfoliodev/scene.gltf");
+    //for development: 
+    // const gltf = useLoader(GLTFLoader, "./portfoliodev/scene.gltf");
     const gltf = useLoader(GLTFLoader, "./scene.gltf");
     const { viewport } = useThree();
     const middlePosition = [viewport.width / 3, 0, 2];

@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./TypeScript/App";
-import { HashRouter } from "react-router-dom";
+import App from "./App";
 
 const ele = document.getElementById("root");
 
@@ -10,9 +9,7 @@ if (ele) {
   const root = ReactDOM.createRoot(ele);
   root.render(
     <React.StrictMode>
-      <HashRouter>
-        <App />
-      </HashRouter>
+      <App />
     </React.StrictMode>,
   );
 }
