@@ -148,8 +148,8 @@ const Home = (): React.JSX.Element => {
           <WorkSlider />
         </div>
         <Reviews reviewsData={reviewsData} />
+        <br /><br />
       </div>
-      <br /><br />
     </div>
   );
 };
