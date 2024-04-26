@@ -42,7 +42,7 @@ const WorkSlider = () => {
   return (
     <Slider {...settings} className="carousel-container">
       {portfolioItems.map((item) => (
-        <div id={item.id} style={{ marginLeft: "40px", marginRight: "40px" }}>
+        <div id={item.id} key={item.id} style={{ marginLeft: "40px", marginRight: "40px" }}>
           <div className="max-w-full rounded-lg overflow-hidden">
             <div className="bg-white">
               <img

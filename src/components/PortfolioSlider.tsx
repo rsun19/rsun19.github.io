@@ -6,7 +6,6 @@ import bookBlog from "../assets/bookBlog.jpg";
 import jokeGenerator from "../assets/jokeGenerator.jpg";
 import recycleAI from "../assets/recycleAI.jpg";
 import myHealth from "../assets/Health App.jpg";
-import useHeight from "../hooks/changeHeight";
 
 interface link {
   id: string;
@@ -23,7 +22,6 @@ interface portfolioItem {
 }
 
 const PortfolioSlider = () => {
-  const smH = useHeight();
   const portfolioItems: portfolioItem[] = [
     {
       id: "1",
@@ -108,7 +106,7 @@ const PortfolioSlider = () => {
   return (
     <Slider {...settings} className="carousel-container">
       {portfolioItems.map((item) => (
-        <div id={item.id} style={{ marginLeft: "40px", marginRight: "40px" }}>
+        <div id={item.id} key={item.id} style={{ marginLeft: "40px", marginRight: "40px" }}>
           <div className="max-w-full rounded-lg overflow-hidden">
             <div className="bg-white">
               <img
@@ -125,28 +123,27 @@ const PortfolioSlider = () => {
                 <p className="text-white text-base text-lg 2xl:text-xl 4xl:text-3xl 5xl:text-4xl">
                   {item.description}
                 </p>
-                {smH && (
-                  <div className="pt-3">
-                    {item.links.map((link) => (
-                      <span
-                        id={link.id}
-                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm 2xl:text-md 4xl:text-xl 5xl:text:2xl font-semibold text-gray-700 mr-2 mb-2"
+                <div className="pt-3">
+                  {item.links.map((link) => (
+                    <span
+                      key={link.id}
+                      id={link.id}
+                      className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm 2xl:text-md 4xl:text-xl 5xl:text:2xl font-semibold text-gray-700 mr-2 mb-2"
+                    >
+                      <a
+                        href={link.link}
+                        target="_blank"
+                        style={{
+                          padding: "10px 0px",
+                          color: "black",
+                          textDecoration: "none",
+                        }} rel="noreferrer"
                       >
-                        <a
-                          href={link.link}
-                          target="_blank"
-                          style={{
-                            padding: "10px 0px",
-                            color: "black",
-                            textDecoration: "none",
-                          }} rel="noreferrer"
-                        >
-                          {link.name}
-                        </a>
-                      </span>
-                    ))}
-                  </div>
-                )}
+                        {link.name}
+                      </a>
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

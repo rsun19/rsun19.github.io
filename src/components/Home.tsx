@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Typing from "./Typing";
 import useWidth from "../hooks/changeWidth";
 import PortfolioSlider from "./PortfolioSlider";
@@ -10,8 +10,13 @@ import { motion, useScroll } from "framer-motion";
 import Menu from "./Menu";
 import ContactBar from "./ContactBar";
 import AlertBox from "./AlertBox";
+import { Review } from "./Reviews/Review";
 
-const Home = () => {
+interface HomeProps {
+  reviewsData: Review[]
+}
+
+const Home: React.FC<HomeProps> = ({ reviewsData }) => {
   useEffect(() => {
     scrollUp();
   }, []);
@@ -126,7 +131,7 @@ const Home = () => {
         <div style={{ marginLeft: "2rem", marginRight: "2rem" }}>
           <WorkSlider />
         </div>
-        <Reviews />
+        <Reviews reviewsData={reviewsData} />
         <br />
         <br />
       </div>
