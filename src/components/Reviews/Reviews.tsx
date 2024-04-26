@@ -16,7 +16,7 @@ const Reviews: React.FC<ReviewsProps> = ({ reviewsData }): React.JSX.Element => 
           Favorite books:
         </h1>
         <div
-        className="bg-zinc-800 rounded-lg mb-6"
+        className="bg-zinc-800 rounded-lg"
         style={{ margin: "20px 40px 20px 40px" }}
         >
           <ul className="ml-3 mr-3 4xl:mr-5 4xl:ml-5">

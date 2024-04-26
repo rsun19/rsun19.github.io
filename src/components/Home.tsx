@@ -149,6 +149,7 @@ const Home = (): React.JSX.Element => {
         </div>
         <Reviews reviewsData={reviewsData} />
       </div>
+      <br /><br />
     </div>
   );
 };
