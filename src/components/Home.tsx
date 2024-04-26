@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Typing from "./Typing";
 import useWidth from "../hooks/changeWidth";
 import PortfolioSlider from "./PortfolioSlider";
