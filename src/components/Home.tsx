@@ -13,31 +13,31 @@ import AlertBox from "./AlertBox";
 import { Review } from "./Reviews/Review";
 
 const Home = () => {
-  const [reviewsData, setReviewsData] = useState<Review[]>([]);
+  // const [reviewsData, setReviewsData] = useState<Review[]>([]);
     
-  useEffect(() => {
-      const fetchReviewsData = async () => {
-        console.log('fetching...');
-        try {
-          const response = await fetch(
-            "https://robertsrandomreviews.com/api/post",
-          );
-          if (response.status === 200) {
-            const jsonData: Review[] = await response.json();
-            jsonData.sort(
-              (a, b) => parseInt(b.rating_int) - parseInt(a.rating_int),
-            );
-            setReviewsData(jsonData.slice(0, 9));
-            console.log(jsonData);
-          } else {
-            console.error("Error: Unexpected status code", response.status);
-          }
-        } catch (error) {
-          console.error("Error fetching reviews data:", error);
-        }
-      };
-      fetchReviewsData();
-  });
+  // useEffect(() => {
+  //     const fetchReviewsData = async () => {
+  //       console.log('fetching...');
+  //       try {
+  //         const response = await fetch(
+  //           "https://robertsrandomreviews.com/api/post",
+  //         );
+  //         if (response.status === 200) {
+  //           const jsonData: Review[] = await response.json();
+  //           jsonData.sort(
+  //             (a, b) => parseInt(b.rating_int) - parseInt(a.rating_int),
+  //           );
+  //           setReviewsData(jsonData.slice(0, 9));
+  //           console.log(jsonData);
+  //         } else {
+  //           console.error("Error: Unexpected status code", response.status);
+  //         }
+  //       } catch (error) {
+  //         console.error("Error fetching reviews data:", error);
+  //       }
+  //     };
+  //     fetchReviewsData();
+  // });
 
   useEffect(() => {
     scrollUp();
@@ -153,7 +153,7 @@ const Home = () => {
         <div style={{ marginLeft: "2rem", marginRight: "2rem" }}>
           <WorkSlider />
         </div>
-        <Reviews reviewsData={reviewsData} />
+        {/* <Reviews reviewsData={reviewsData} /> */}
         <br />
         <br />
       </div>
