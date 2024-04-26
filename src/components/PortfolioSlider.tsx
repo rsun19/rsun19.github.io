@@ -21,7 +21,7 @@ interface portfolioItem {
   links: link[];
 }
 
-const PortfolioSlider = () => {
+const PortfolioSlider = (): React.JSX.Element => {
   const portfolioItems: portfolioItem[] = [
     {
       id: "1",

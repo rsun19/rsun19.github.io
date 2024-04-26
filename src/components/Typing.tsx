@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Typing = () => {
+const Typing = (): React.JSX.Element => {
   const [isTyping, setIsTyping] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState("");
@@ -53,7 +53,7 @@ const Typing = () => {
   }, [text, isTyping, wordIndex]);
 
   return (
-    <div>
+    <div className="mb-3">
       <span
         className="mr-0.5 text-4xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl 5xl:text-7xl"
         style={{ color: "black" }}

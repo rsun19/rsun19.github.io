@@ -14,7 +14,7 @@ interface ReviewItemProps {
 
 const ReviewItem: React.FC<ReviewItemProps> = ({ item }): React.JSX.Element => {
     return(
-        <div>
+        <>
             <a target="_blank" href={item.url} key={item.id} rel="noreferrer">
                 <li
                     className="pb-3 pt-3 4xl:pt-5 4xl:pb-5"
@@ -35,7 +35,7 @@ const ReviewItem: React.FC<ReviewItemProps> = ({ item }): React.JSX.Element => {
                     </div>
                 </li>
             </a>
-        </div>
+        </>
     );
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Menu = () => {
+const Menu = (): React.JSX.Element => {
   const [page, setPage] = useState(0);
 
   const arrangeMenu = () => {

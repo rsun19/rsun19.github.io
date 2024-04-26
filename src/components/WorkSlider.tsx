@@ -11,7 +11,7 @@ interface portfolioItem {
   description: string;
 }
 
-const WorkSlider = () => {
+const WorkSlider = (): React.JSX.Element => {
   const portfolioItems: portfolioItem[] = [
     {
       id: "1",

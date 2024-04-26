@@ -9,10 +9,10 @@ import Reviews from "./Reviews/Reviews"
 import { motion, useScroll } from "framer-motion";
 import Menu from "./Menu";
 import ContactBar from "./ContactBar";
-import AlertBox from "./AlertBox";
+import AlertBoxWrapper from "./AlertBoxWrapper/AlertBoxWrapper";
 import { Review } from "./Reviews/Review";
 
-const Home = () => {
+const Home = (): React.JSX.Element => {
   const [reviewsData, setReviewsData] = useState<Review[]>([]);
     
   useEffect(() => {
@@ -65,34 +65,30 @@ const Home = () => {
         <div style={{ textAlign: "center", paddingTop: '3rem'}}>
           <Menu />
         </div>
-        <AlertBox md={md} />
-        <br />
-        {twoxl && <br />}
-        <div style={{ textAlign: "center" }}>
-          {md && !twoxl && (
-            <p
+        <AlertBoxWrapper md={md} />
+        <br /> {twoxl && <br />}
+        <div className="text-center mb-3">
+          {
+            twoxl ? <p
+            className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-black"
+            style={{ marginTop: "7rem" }}
+            >
+              Hi, I'm Robert.
+            </p> : (md ?
+              <p
               className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-black"
               style={{ marginTop: "5rem" }}
-            >
-              Hi, I'm Robert.
-            </p>
-          )}
-          {twoxl && (
-            <p
-              className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-black"
-              style={{ marginTop: "7rem" }}
-            >
-              Hi, I'm Robert.
-            </p>
-          )}
-          {!md && (
-            <p
+              >
+                Hi, I'm Robert.
+              </p> :
+              <p
               className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-black"
               style={{ marginTop: "0rem" }}
-            >
+              >
               Hi, I'm Robert.
-            </p>
-          )}
+              </p>
+            )
+          }
           <div
             style={{
               display: "flex",
@@ -101,39 +97,37 @@ const Home = () => {
               gap: "15px",
             }}
           >
-            {!twoxl && (
-                <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.5,
-                  ease: [0, 0.71, 0.2, 1.01]
-                }}
-              >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01]
+              }}
+            >
+              {
+                twoxl ? 
                 <img
-                className="w-28 h-28 p-1 rounded-full ring-2 ring-gray-300"
-                style={{ objectFit: "cover" }}
-                src={profile}
-                alt="Bordered avatar"
-                />
-              </motion.div>
-            )}
-            {twoxl && (
-              <img
                 className="w-40 h-40 p-1 rounded-full ring-2 ring-gray-300"
                 style={{ objectFit: "cover" }}
                 src={profile}
                 alt="Bordered avatar"
-              />
-            )}
+                /> :
+                <img
+                className="w-40 h-40 p-1 rounded-full ring-2 ring-gray-300"
+                style={{ objectFit: "cover" }}
+                src={profile}
+                alt="Bordered avatar"
+                />
+              }
+            </motion.div>
           </div>
           <br />
           <Typing />
           <br />
           <ContactBar twoxl={twoxl} />
         </div>
-        <br />
         <h1
           id="portfolio"
           className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl"
@@ -154,8 +148,6 @@ const Home = () => {
           <WorkSlider />
         </div>
         <Reviews reviewsData={reviewsData} />
-        <br />
-        <br />
       </div>
     </div>
   );
