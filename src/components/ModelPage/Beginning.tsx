@@ -3,35 +3,8 @@ import { Canvas } from '@react-three/fiber'
 import Model from './Model';
 import { Environment, OrbitControls } from '@react-three/drei';
 import Home from '../Home';
-import { Review } from '../Reviews/Review'
 
 const Beginning = () => {
-  const [reviewsData, setReviewsData] = useState<Review[]>([]);
-    
-  useEffect(() => {
-      const fetchReviewsData = async () => {
-        console.log('fetching...');
-        try {
-          const response = await fetch(
-            "https://robertsrandomreviews.com/api/post",
-          );
-          if (response.status === 200) {
-            const jsonData: Review[] = await response.json();
-            jsonData.sort(
-              (a, b) => parseInt(b.rating_int) - parseInt(a.rating_int),
-            );
-            setReviewsData(jsonData.slice(0, 9));
-            console.log(jsonData);
-          } else {
-            console.error("Error: Unexpected status code", response.status);
-          }
-        } catch (error) {
-          console.error("Error fetching reviews data:", error);
-        }
-      };
-      fetchReviewsData();
-  });
-
     const [click, setClick] = useState(false);
     const startAnimation = ()  => {
         const portfolioButton = document.getElementById('portfolioButton');
@@ -79,7 +52,7 @@ const Beginning = () => {
     return (
       <div>
         <div style={{ position: 'relative', background: "#D3D3D3" }}>
-          <Home reviewsData={reviewsData} />
+          <Home />
         </div>
         {!finishAnimation && <div style={{ margin: '0px', padding: '0px'}}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

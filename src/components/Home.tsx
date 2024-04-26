@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Typing from "./Typing";
 import useWidth from "../hooks/changeWidth";
 import PortfolioSlider from "./PortfolioSlider";
@@ -12,11 +12,33 @@ import ContactBar from "./ContactBar";
 import AlertBox from "./AlertBox";
 import { Review } from "./Reviews/Review";
 
-interface HomeProps {
-  reviewsData: Review[]
-}
+const Home = () => {
+  const [reviewsData, setReviewsData] = useState<Review[]>([]);
+    
+  useEffect(() => {
+      const fetchReviewsData = async () => {
+        console.log('fetching...');
+        try {
+          const response = await fetch(
+            "https://robertsrandomreviews.com/api/post",
+          );
+          if (response.status === 200) {
+            const jsonData: Review[] = await response.json();
+            jsonData.sort(
+              (a, b) => parseInt(b.rating_int) - parseInt(a.rating_int),
+            );
+            setReviewsData(jsonData.slice(0, 9));
+            console.log(jsonData);
+          } else {
+            console.error("Error: Unexpected status code", response.status);
+          }
+        } catch (error) {
+          console.error("Error fetching reviews data:", error);
+        }
+      };
+      fetchReviewsData();
+  });
 
-const Home: React.FC<HomeProps> = ({ reviewsData }) => {
   useEffect(() => {
     scrollUp();
   }, []);
