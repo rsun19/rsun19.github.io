@@ -16,10 +16,7 @@ const Reviews: React.FC<ReviewsProps> = ({ reviewsData }): React.JSX.Element => 
         >
           Favorite books:
         </h1>
-        <div
-        className="rounded-lg"
-        style={{ margin: "20px 40px 20px 40px" }}
-        >
+        <div className="rounded-lg m-3">
           <ul className="ml-3 mr-3 4xl:mr-5 4xl:ml-5">
               {reviewsData.map((item) => (
                   <ReviewItem item={item} />
