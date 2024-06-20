@@ -18,18 +18,18 @@ const ReviewItem: React.FC<ReviewItemProps> = ({ item }): React.JSX.Element => {
             <a target="_blank" href={item.url} key={item.id} rel="noreferrer">
                 <li
                     className="pb-3 pt-3 4xl:pt-5 4xl:pb-5"
-                    style={{ borderBottom: "1px solid white" }}
+                    style={{ borderBottom: "1px solid black" }}
                 >
                     <div className="flex items-center space-x-4">
                         <div className="flex-1 min-w-0">
-                            <p className="text-sm 2xl:text-xl 4xl:text-3xl 5xl:text-4xl text-white truncate">
+                            <p className="text-sm 2xl:text-xl 4xl:text-3xl 5xl:text-4xl text-black truncate">
                                 {item.title}
                             </p>
                             <p className="text-sm 2xl:text-xl 4xl:text-3xl 5xl:text-4xl text-gray-400 truncate">
                                 {item.author_name}
                             </p>
                         </div>
-                        <div className="inline-flex 2xl:text-xl 4xl:text-3xl 5xl:text-4xl items-center text-base font-semibold text-white">
+                        <div className="inline-flex 2xl:text-xl 4xl:text-3xl 5xl:text-4xl items-center text-base font-semibold text-black">
                             Rating: {item.rating_int}/10
                         </div>
                     </div>

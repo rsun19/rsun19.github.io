@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Typing from "./Typing";
 import useWidth from "../hooks/changeWidth";
-import PortfolioSlider from "./PortfolioSlider";
+import PortfolioSlider from "./carousel/PortfolioSlider";
 import "font-awesome/css/font-awesome.min.css";
-import WorkSlider from "./WorkSlider";
 import profile from "../assets/myImage.jpg";
 import Reviews from "./Reviews/Reviews"
 import { motion, useScroll } from "framer-motion";
@@ -11,6 +10,7 @@ import Menu from "./Menu";
 import ContactBar from "./ContactBar";
 import AlertBoxWrapper from "./AlertBoxWrapper/AlertBoxWrapper";
 import { Review } from "./Reviews/Review";
+import WorkTimeline from "./Timeline/Timeline";
 
 const Home = (): React.JSX.Element => {
   const [reviewsData, setReviewsData] = useState<Review[]>([]);
@@ -128,24 +128,11 @@ const Home = (): React.JSX.Element => {
           <br />
           <ContactBar twoxl={twoxl} />
         </div>
-        <h1
-          id="portfolio"
-          className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl"
-          style={{ textAlign: "center", color: "black", paddingTop: "10px" }}
-        >
-          Portfolio
-        </h1>
-        <div style={{ marginLeft: "2rem", marginRight: "2rem" }}>
+        <div id="portfolio" style={{ marginLeft: "2rem", marginRight: "2rem", paddingTop: "10px"  }}>
           <PortfolioSlider />
         </div>
-        <h1 id = "WorkXP"
-          className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl"
-          style={{ textAlign: "center", color: "black", paddingTop: "10px" }}
-        >
-          Work Experience
-        </h1>
-        <div style={{ marginLeft: "2rem", marginRight: "2rem" }}>
-          <WorkSlider />
+        <div id="WorkXP" style={{ marginLeft: "2rem", marginRight: "2rem", paddingTop: "10px" }}>
+          <WorkTimeline />
         </div>
         <Reviews reviewsData={reviewsData} />
         <br /><br />
