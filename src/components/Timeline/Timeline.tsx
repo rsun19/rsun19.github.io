@@ -6,9 +6,9 @@ export default function WorkTimeline() {
     const workItems: PortfolioItem[] = [
         {
             id: "1",
-            title: "Software Engineer Intern - Openshift AI Dashboard Team at Red Hat",
+            title: "Software Engineer Intern - OpenShift AI Dashboard Team at Red Hat",
             description:
-            "Fixed bugs, added Cypress end to end tests, and configured eslint rules which drastically improved overall code quality in the Red Hat Openshift AI Dashboard website.",
+            "Fixed bugs, added Cypress end to end tests, and configured eslint rules which drastically improved overall code quality in the Red Hat OpenShift AI Dashboard website.",
             date: "May 2024 - Present"
         },
         {
