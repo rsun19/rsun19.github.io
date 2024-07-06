@@ -17,15 +17,15 @@ const ReviewItem: React.FC<ReviewItemProps> = ({ item }): React.JSX.Element => {
         <>
             <a target="_blank" href={item.url} key={item.id} rel="noreferrer">
                 <li
-                    className="pb-3 pt-3 4xl:pt-5 4xl:pb-5"
+                    className="pb-3 pt-3"
                     style={{ borderBottom: "1px solid black" }}
                 >
                     <div className="flex items-center space-x-4">
                         <div className="flex-1 min-w-0">
-                            <p className="text-xl text-black truncate">
+                            <p className="text-md text-black truncate">
                                 {item.title}
                             </p>
-                            <p className="text-xl text-gray-400 truncate">
+                            <p className="text-md text-gray-400 truncate">
                                 {item.author_name}
                             </p>
                         </div>
