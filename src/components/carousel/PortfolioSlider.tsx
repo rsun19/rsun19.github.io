@@ -30,7 +30,7 @@ const CardProp = ({ color, title, description, category, links }: PortfolioItem)
           {title}
         </Title>
       </div>
-      <div style={{ position: 'absolute', bottom: '1rem' }}>
+      <div className='flex flex-col gap-2' style={{ position: 'absolute', bottom: '1rem' }}>
       {
         links?.map((link): React.ReactNode => {
           return (
@@ -39,7 +39,6 @@ const CardProp = ({ color, title, description, category, links }: PortfolioItem)
                 {link.name}
               </Button>
             </a>
-
           )
         })
       }
@@ -67,6 +66,15 @@ const portfolioItems: PortfolioItem[] = [
         name: "View source code",
       },
     ],
+  },
+  {
+    id: "2",
+    image: bookBlog,
+    title: "Flashcards App",
+    category: "Web Development (Links coming soon)",
+    description: "Typescript, React, Javascript, Next.js, Express.js, Docker",
+    color: '#FFE4E1',
+    links: [],
   },
   {
     id: "2",
@@ -134,10 +142,8 @@ export default function PortfolioSlider() {
 
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
-      <h1 className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl"
-            style={{ textAlign: "center", color: "black", paddingTop: "10px" }}
-          >
-            Portfolio
+      <h1 className="text-3xl text-center pb-6">
+        Portfolio
       </h1>
       <Carousel
         slideSize={{ base: '100%', sm: '50%'}}

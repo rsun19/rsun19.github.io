@@ -22,14 +22,14 @@ const ReviewItem: React.FC<ReviewItemProps> = ({ item }): React.JSX.Element => {
                 >
                     <div className="flex items-center space-x-4">
                         <div className="flex-1 min-w-0">
-                            <p className="text-sm 2xl:text-xl 4xl:text-3xl 5xl:text-4xl text-black truncate">
+                            <p className="text-xl text-black truncate">
                                 {item.title}
                             </p>
-                            <p className="text-sm 2xl:text-xl 4xl:text-3xl 5xl:text-4xl text-gray-400 truncate">
+                            <p className="text-xl text-gray-400 truncate">
                                 {item.author_name}
                             </p>
                         </div>
-                        <div className="inline-flex 2xl:text-xl 4xl:text-3xl 5xl:text-4xl items-center text-base font-semibold text-black">
+                        <div className="inline-flex items-center text-base font-semibold text-black">
                             Rating: {item.rating_int}/10
                         </div>
                     </div>

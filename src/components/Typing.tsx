@@ -10,17 +10,8 @@ const Typing = (): React.JSX.Element => {
 
   useEffect(() => {
     const words = [
-      "visionary.",
       "software dev.",
       "student.",
-      "book enthusiast.",
-      "TV connoisseur.",
-      "salsa dancer.",
-      "firefighter.",
-      "cyclist.",
-      "leader.",
-      "language learner.",
-      "traveler.",
     ];
 
     const typingInterval: number = setInterval(

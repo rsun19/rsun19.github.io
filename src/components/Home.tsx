@@ -65,30 +65,11 @@ const Home = (): React.JSX.Element => {
         <div style={{ textAlign: "center", paddingTop: '3rem'}}>
           <Menu />
         </div>
-        <AlertBoxWrapper md={md} />
-        <br /> {twoxl && <br />}
+        {/* <AlertBoxWrapper md={md} /> */}
         <div className="text-center mb-3">
-          {
-            twoxl ? <p
-            className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-black"
-            style={{ marginTop: "7rem" }}
-            >
-              Hi, I'm Robert.
-            </p> : (md ?
-              <p
-              className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-black"
-              style={{ marginTop: "5rem" }}
-              >
-                Hi, I'm Robert.
-              </p> :
-              <p
-              className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl text-black"
-              style={{ marginTop: "0rem" }}
-              >
-              Hi, I'm Robert.
-              </p>
-            )
-          }
+          <br />
+           <p className="text-3xl" >Hi, I'm Robert</p>
+           <br />
           <div
             style={{
               display: "flex",
@@ -106,25 +87,16 @@ const Home = (): React.JSX.Element => {
                 ease: [0, 0.71, 0.2, 1.01]
               }}
             >
-              {
-                twoxl ? 
-                <img
-                className="w-40 h-40 p-1 rounded-full ring-2 ring-gray-300"
-                style={{ objectFit: "cover" }}
-                src={profile}
-                alt="Bordered avatar"
-                /> :
-                <img
-                className="w-40 h-40 p-1 rounded-full ring-2 ring-gray-300"
-                style={{ objectFit: "cover" }}
-                src={profile}
-                alt="Bordered avatar"
-                />
-              }
+              <img
+              className="w-40 h-40 p-1 rounded-full ring-2 ring-gray-300"
+              style={{ objectFit: "cover" }}
+              src={profile}
+              alt="Bordered avatar"
+              /> 
             </motion.div>
           </div>
-          <br />
-          <Typing />
+          {/* <br /> */}
+          {/* <Typing /> */}
           <br />
           <ContactBar twoxl={twoxl} />
         </div>
@@ -134,7 +106,9 @@ const Home = (): React.JSX.Element => {
         <div id="WorkXP" style={{ marginLeft: "2rem", marginRight: "2rem", paddingTop: "10px" }}>
           <WorkTimeline />
         </div>
-        <Reviews reviewsData={reviewsData} />
+        <div style={{ marginLeft: "2rem", marginRight: "2rem", paddingTop: "10px" }}>
+          <Reviews reviewsData={reviewsData} />
+        </div>
         <br /><br />
       </div>
     </div>

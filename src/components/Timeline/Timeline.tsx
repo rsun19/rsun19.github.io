@@ -28,9 +28,7 @@ export default function WorkTimeline() {
     ];
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
-    <h1 className="text-3xl 3xl:text-4xl 4xl:text-6xl mb-5 3xl:mb-10 5xl:text-7xl"
-          style={{ textAlign: "center", color: "black", paddingTop: "10px" }}
-        >
+     <h1 className="text-3xl text-center pb-6">
           Work Experience
      </h1>
     <Timeline active={3} bulletSize={24} lineWidth={2}>
