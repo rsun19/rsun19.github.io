@@ -50,6 +50,26 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: "1",
     image: bookBlog,
+    title: "Flashcards App",
+    category: "Web Development",
+    description: "Typescript, React, Javascript, Next.js, Express.js, Docker",
+    color: '#FFE4E1',
+    links: [
+      {
+        id: "1",
+        link: "https://easyflashcards.org/",
+        name: "View website",
+      },
+      {
+        id: "2",
+        link: "https://github.com/rsun19/easy-cards-docker",
+        name: "View source code",
+      },
+    ],
+  },
+  {
+    id: "2",
+    image: bookBlog,
     title: "Book Blog App",
     category: "Web Development",
     description: "Python, JavaScript, Flask, HTML, CSS",
@@ -66,15 +86,6 @@ const portfolioItems: PortfolioItem[] = [
         name: "View source code",
       },
     ],
-  },
-  {
-    id: "2",
-    image: bookBlog,
-    title: "Flashcards App",
-    category: "Web Development (Links coming soon)",
-    description: "Typescript, React, Javascript, Next.js, Express.js, Docker",
-    color: '#FFE4E1',
-    links: [],
   },
   {
     id: "2",
