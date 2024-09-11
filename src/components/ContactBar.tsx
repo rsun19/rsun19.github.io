@@ -1,4 +1,5 @@
 import React from 'react'
+import resume from '../assets/ROBERT_SUN_RESUME.pdf'
 
 interface ContactBarProps {
     twoxl: boolean
@@ -41,7 +42,7 @@ const ContactBar: React.FC<ContactBarProps> = ({ twoxl }): React.JSX.Element => 
             </a>
             <a
               target="_blank"
-              href="https://docs.google.com/document/d/1hG3yis9QbTmj8pNKluLfpBXrWxg3TpeZJIHi8bYpqDE/edit?usp=sharing"
+              href={resume}
               style={{ marginRight: "10px", color: "black" }} rel="noreferrer"
             >
               {!twoxl && (
