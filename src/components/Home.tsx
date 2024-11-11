@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Typing from "./Typing";
 import useWidth from "../hooks/changeWidth";
 import PortfolioSlider from "./carousel/PortfolioSlider";
 import "font-awesome/css/font-awesome.min.css";
@@ -8,7 +7,6 @@ import Reviews from "./Reviews/Reviews"
 import { motion, useScroll } from "framer-motion";
 import Menu from "./Menu";
 import ContactBar from "./ContactBar";
-import AlertBoxWrapper from "./AlertBoxWrapper/AlertBoxWrapper";
 import { Review } from "./Reviews/Review";
 import WorkTimeline from "./Timeline/Timeline";
 
