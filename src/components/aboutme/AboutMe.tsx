@@ -12,7 +12,7 @@ export default function AboutMe() {
             experiences, I've gained exposure to a variety of fields from full stack development to artifical intelligence
             and statistics. Plus, I'm taking a class right now called "Alien Worlds." 10/10 highly recommend.
             <br /><br />
-            When I'm not in front of a code editor, I like learning Chinese and Spanish on Duolingo, watching tv shows on Netflix, 
+            When I'm not in front of a code editor, I like learning Chinese and German on Duolingo, watching tv shows on Netflix, 
             going to the gym, playing pickleball, and reading. 
         </Text>
         </Card>

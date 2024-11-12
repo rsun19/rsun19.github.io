@@ -1,7 +1,3 @@
-# Notes:
-
-I have recently migrated the codebase to TypeScript. You will see a TypeScript and JavaScript folder, but only the TypeScript folder is up to date!
-
 # Website:
 
 - https://rsun19.github.io
@@ -18,11 +14,9 @@ I have recently migrated the codebase to TypeScript. You will see a TypeScript a
 
 4. run `npm start`
 
-5. In subsequent steps, steps 2 (if want to edit css), 3, and 4 are mandatory.
+5. Happy coding!
 
-6. Happy coding!
-
-7. If you want to deploy onto Github Pages, you will have edit the `package.json` file and run `npm run deploy`.
+6. If you want to deploy onto Github Pages, you will have edit the `package.json` file and run `npm run deploy`.
 
 3D MODEL SOURCES:
 
