@@ -58,7 +58,6 @@ const Beginning = (): React.JSX.Element => {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{ height: '100vh', width: '100vw', margin: '0px', padding: '0px'}}>
               <Canvas>
-                  {/* add full path for development --> "./portfoliodev/farm_field_puresky_1k.hdr"*/}
                   <Environment files="./farm_field_puresky_1k.hdr" background/>
                   <Suspense fallback={null}>
                       {click && <Model onAnimationFinish={finishAnimationChange} onMidwayFinish={finishMidFunc} start={click}/>}

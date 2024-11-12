@@ -9,6 +9,7 @@ import Menu from "./Menu";
 import ContactBar from "./ContactBar";
 import { Review } from "./Reviews/Review";
 import WorkTimeline from "./Timeline/Timeline";
+import AboutMe from "./aboutme/AboutMe";
 
 const Home = (): React.JSX.Element => {
   const [reviewsData, setReviewsData] = useState<Review[]>([]);
@@ -50,7 +51,7 @@ const Home = (): React.JSX.Element => {
     });
   };
 
-  const { md, twoxl } = useWidth();
+  const { twoxl } = useWidth();
 
   return (
     <div id='home-page' className='page-transition'>
@@ -97,6 +98,9 @@ const Home = (): React.JSX.Element => {
           {/* <Typing /> */}
           <br />
           <ContactBar twoxl={twoxl} />
+        </div>
+        <div style={{ marginLeft: "2rem", marginRight: "2rem", paddingTop: "10px"  }}>
+          <AboutMe />
         </div>
         <div id="portfolio" style={{ marginLeft: "2rem", marginRight: "2rem", paddingTop: "10px"  }}>
           <PortfolioSlider />
