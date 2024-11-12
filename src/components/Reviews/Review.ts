@@ -4,4 +4,5 @@ export interface Review {
     title: string;
     author_name: string;
     rating_int: string;
+    iso_date: string;
 }

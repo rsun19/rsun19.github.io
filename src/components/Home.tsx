@@ -24,7 +24,7 @@ const Home = (): React.JSX.Element => {
           if (response.status === 200) {
             const jsonData: Review[] = await response.json();
             jsonData.sort(
-              (a, b) => parseInt(b.rating_int) - parseInt(a.rating_int),
+              (a, b) => parseInt(b.rating_int) - parseInt(a.rating_int) || b.iso_date.localeCompare(a.iso_date)
             );
             setReviewsData(jsonData.slice(0, 9));
             console.log(jsonData);
