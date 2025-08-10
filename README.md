@@ -1,6 +1,6 @@
 # Website:
 
-- https://rsun19.github.io/portfoliodev/
+- https://rsun19.github.io
 
 # Getting Started with running locally
 
