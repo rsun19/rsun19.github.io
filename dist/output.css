@@ -9,8 +9,8 @@
 */
 
   *,
-::before,
-::after {
+  ::before,
+  ::after {
     box-sizing: border-box;
     /* 1 */
     border-width: 0;
@@ -22,8 +22,8 @@
   }
 
   ::before,
-::after {
-    --tw-content: '';
+  ::after {
+    --tw-content: "";
   }
 
   /*
@@ -43,10 +43,23 @@
     /* 3 */
     tab-size: 4;
     /* 3 */
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      "Noto Sans",
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji";
     /* 4 */
-    -webkit-font-feature-settings: normal;
-            font-feature-settings: normal;
+    font-feature-settings: normal;
     /* 5 */
     font-variation-settings: normal;
     /* 6 */
@@ -85,7 +98,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
   abbr:where([title]) {
     -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted;
+    text-decoration: underline dotted;
   }
 
   /*
@@ -93,11 +106,11 @@ Remove the default font size and weight for headings.
 */
 
   h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: inherit;
     font-weight: inherit;
   }
@@ -116,7 +129,7 @@ Add the correct font weight in Edge and Safari.
 */
 
   b,
-strong {
+  strong {
     font-weight: bolder;
   }
 
@@ -126,10 +139,11 @@ strong {
 */
 
   code,
-kbd,
-samp,
-pre {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  kbd,
+  samp,
+  pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -148,7 +162,7 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
   sub,
-sup {
+  sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -185,10 +199,10 @@ sup {
 */
 
   button,
-input,
-optgroup,
-select,
-textarea {
+  input,
+  optgroup,
+  select,
+  textarea {
     font-family: inherit;
     /* 1 */
     font-size: 100%;
@@ -210,7 +224,7 @@ Remove the inheritance of text transform in Edge and Firefox.
 */
 
   button,
-select {
+  select {
     text-transform: none;
   }
 
@@ -220,9 +234,9 @@ select {
 */
 
   button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
     -webkit-appearance: button;
     /* 1 */
     background-color: transparent;
@@ -260,7 +274,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
   ::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
+  ::-webkit-outer-spin-button {
     height: auto;
   }
 
@@ -269,7 +283,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-  [type='search'] {
+  [type="search"] {
     -webkit-appearance: textfield;
     /* 1 */
     outline-offset: -2px;
@@ -309,18 +323,18 @@ Removes the default spacing and border for appropriate elements.
 */
 
   blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
+  dl,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  figure,
+  p,
+  pre {
     margin: 0;
   }
 
@@ -334,8 +348,8 @@ pre {
   }
 
   ol,
-ul,
-menu {
+  ul,
+  menu {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -354,15 +368,8 @@ Prevent resizing textareas horizontally by default.
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    opacity: 1;
-    /* 1 */
-    color: #9ca3af;
-    /* 2 */
-  }
-
   input::placeholder,
-textarea::placeholder {
+  textarea::placeholder {
     opacity: 1;
     /* 1 */
     color: #9ca3af;
@@ -374,7 +381,7 @@ Set the default cursor for buttons.
 */
 
   button,
-[role="button"] {
+  [role="button"] {
     cursor: pointer;
   }
 
@@ -393,13 +400,13 @@ Make sure disabled buttons don't get the pointer cursor.
 */
 
   img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
     display: block;
     /* 1 */
     vertical-align: middle;
@@ -411,7 +418,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 */
 
   img,
-video {
+  video {
     max-width: 100%;
     height: auto;
   }
@@ -422,57 +429,9 @@ video {
     display: none;
   }
 
-  *, ::before, ::after {
-    --tw-border-spacing-x: 0;
-    --tw-border-spacing-y: 0;
-    --tw-translate-x: 0;
-    --tw-translate-y: 0;
-    --tw-rotate: 0;
-    --tw-skew-x: 0;
-    --tw-skew-y: 0;
-    --tw-scale-x: 1;
-    --tw-scale-y: 1;
-    --tw-pan-x:  ;
-    --tw-pan-y:  ;
-    --tw-pinch-zoom:  ;
-    --tw-scroll-snap-strictness: proximity;
-    --tw-gradient-from-position:  ;
-    --tw-gradient-via-position:  ;
-    --tw-gradient-to-position:  ;
-    --tw-ordinal:  ;
-    --tw-slashed-zero:  ;
-    --tw-numeric-figure:  ;
-    --tw-numeric-spacing:  ;
-    --tw-numeric-fraction:  ;
-    --tw-ring-inset:  ;
-    --tw-ring-offset-width: 0px;
-    --tw-ring-offset-color: #fff;
-    --tw-ring-color: rgb(59 130 246 / 0.5);
-    --tw-ring-offset-shadow: 0 0 #0000;
-    --tw-ring-shadow: 0 0 #0000;
-    --tw-shadow: 0 0 #0000;
-    --tw-shadow-colored: 0 0 #0000;
-    --tw-blur:  ;
-    --tw-brightness:  ;
-    --tw-contrast:  ;
-    --tw-grayscale:  ;
-    --tw-hue-rotate:  ;
-    --tw-invert:  ;
-    --tw-saturate:  ;
-    --tw-sepia:  ;
-    --tw-drop-shadow:  ;
-    --tw-backdrop-blur:  ;
-    --tw-backdrop-brightness:  ;
-    --tw-backdrop-contrast:  ;
-    --tw-backdrop-grayscale:  ;
-    --tw-backdrop-hue-rotate:  ;
-    --tw-backdrop-invert:  ;
-    --tw-backdrop-opacity:  ;
-    --tw-backdrop-saturate:  ;
-    --tw-backdrop-sepia:  ;
-  }
-
-  ::-webkit-backdrop {
+  *,
+  ::before,
+  ::after {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
     --tw-translate-x: 0;
@@ -601,18 +560,6 @@ video {
   margin-left: 0.75rem;
 }
 
-.mr-0 {
-  margin-right: 0px;
-}
-
-.mr-0\.5 {
-  margin-right: 0.125rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -633,16 +580,8 @@ video {
   display: none;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
 .h-40 {
   height: 10rem;
-}
-
-.w-4 {
-  width: 1rem;
 }
 
 .w-40 {
@@ -657,17 +596,10 @@ video {
   flex: 1 1 0%;
 }
 
-.flex-auto {
-  flex: 1 1 auto;
-}
-
 .transform {
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.resize {
-  resize: both;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -702,36 +634,8 @@ video {
   border-radius: 0.5rem;
 }
 
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-sky-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
-}
-
-.fill-current {
-  fill: currentColor;
-}
-
 .p-1 {
   padding: 0.25rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .pb-3 {
@@ -746,10 +650,6 @@ video {
   padding-top: 0.75rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
@@ -759,35 +659,13 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
 .font-semibold {
   font-weight: 600;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.leading-none {
-  line-height: 1;
 }
 
 .text-black {
@@ -800,25 +678,21 @@ video {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-indigo-100 {
-  --tw-text-opacity: 1;
-  color: rgb(224 231 255 / var(--tw-text-opacity));
-}
-
-.opacity-75 {
-  opacity: 0.75;
-}
-
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+    0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .ring-2 {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow, 0 0 #0000);
 }
 
 .ring-gray-300 {
@@ -827,9 +701,35 @@ video {
 }
 
 .transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
+    -webkit-text-decoration-color,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
+    backdrop-filter,
+    -webkit-text-decoration-color,
+    -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -840,19 +740,7 @@ video {
   padding-left: 2px;
   height: 35px;
   background-color: black;
-  -webkit-animation: blink-caret 0.75s infinite;
-          animation: blink-caret 0.75s infinite;
-}
-
-@-webkit-keyframes blink-caret {
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
+  animation: blink-caret 0.75s infinite;
 }
 
 @keyframes blink-caret {
@@ -959,13 +847,11 @@ video {
   right: 0;
   height: 10px;
   background: red;
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
+  transform-origin: 0%;
 }
 
 .menu {
-  -webkit-filter: drop-shadow(1px 1px 1px #4700b3);
-          filter: drop-shadow(1px 1px 1px #4700b3);
+  filter: drop-shadow(1px 1px 1px #4700b3);
   width: 300px;
 }
 
@@ -980,7 +866,7 @@ video {
   height: 40px;
   padding: 20px;
   z-index: 999999;
-  color: white
+  color: white;
 }
 
 #handle {
@@ -988,7 +874,7 @@ video {
   width: 79px;
   border-radius: 40px;
   position: absolute;
-  border:white 3px solid;
+  border: white 3px solid;
   top: 0;
   left: 0;
   margin-left: 0%;
@@ -1001,85 +887,12 @@ video {
   width: 100%;
   height: 100vh;
   background-color: lightgrey;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  transition: -webkit-transform 2s ease-in-out;
+  transform: translateX(100%);
   transition: transform 2s ease-in-out;
-  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
   z-index: 5;
   /* overflow-x: hidden; */
 }
 
 .show {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-@media (min-width: 1024px) {
-  .lg\:inline-flex {
-    display: inline-flex;
-  }
-
-  .lg\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .\32xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .\32xl\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 1900px) {
-  .\33xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-
-@media (min-width: 2300px) {
-  .\34xl\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .\34xl\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .\34xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 3000px) {
-  .\35xl\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .\35xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .\35xl\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
+  transform: translateX(0);
 }
