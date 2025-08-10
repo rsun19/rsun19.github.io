@@ -8,10 +8,7 @@ import * as THREE from "three";
 // eslint-disable-next-line react/prop-types
 const PlaneModel = ({ onAnimationFinish, onMidwayFinish, start }) => {
   const meshModel = React.useRef();
-  const gltf =
-    process.env.NODE_ENV === "development"
-      ? useLoader(GLTFLoader, "./portfoliodev/scene.gltf")
-      : useLoader(GLTFLoader, "./scene.gltf");
+  const gltf = useLoader(GLTFLoader, "./scene.gltf");
   const { viewport } = useThree();
   const middlePosition = [viewport.width / 3, 0, 2];
   const endPosition = [-viewport.width, -viewport.height * (0.5 / 3), 2];

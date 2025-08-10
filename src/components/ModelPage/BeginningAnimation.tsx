@@ -73,9 +73,7 @@ const BeginningAnimation = (): React.JSX.Element => {
             >
               <Canvas>
                 <Environment
-                  files={`./${
-                    process.env.NODE_ENV === "development" && "portfoliodev/"
-                  }farm_field_puresky_1k.hdr`}
+                  files="./farm_field_puresky_1k.hdr"
                   background
                 />
                 <Suspense fallback={null}>
