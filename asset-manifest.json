@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.8f0f2dc6.css",
-    "main.js": "/static/js/main.75392d9d.js",
-    "static/media/myImage.jpg": "/static/media/myImage.c6fdb84e23702b655af4.jpg",
+    "main.css": "/static/css/main.63f33e5e.css",
+    "main.js": "/static/js/main.35b0bf29.js",
+    "static/media/haarlam.jpg": "/static/media/haarlam.9bdfea07901ff9354e71.jpg",
+    "static/media/myImage.jpg": "/static/media/myImage.bf16e63916f86adcf997.jpg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/bookBlog.jpg": "/static/media/bookBlog.287f906d7ce1d64922d2.jpg",
     "static/media/recycleAI.jpg": "/static/media/recycleAI.393e1ad58b830a3f2d5b.jpg",
@@ -11,13 +12,13 @@
     "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/jokeGenerator.jpg": "/static/media/jokeGenerator.a06e43e3c0df56dc37c6.jpg",
-    "static/media/ROBERT_SUN_RESUME.pdf": "/static/media/ROBERT_SUN_RESUME.13a428194c09372fdc10.pdf",
+    "static/media/ROBERT_SUN_RESUME.pdf": "/static/media/ROBERT_SUN_RESUME.d12f2615edca03f2f1c5.pdf",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.8f0f2dc6.css",
-    "static/js/main.75392d9d.js"
+    "static/css/main.63f33e5e.css",
+    "static/js/main.35b0bf29.js"
   ]
 }
