@@ -36,11 +36,20 @@ const Home = (): React.JSX.Element => {
     <div id="home-page" className="page-transition">
       <div id="homeTop" style={{ background: "#D3D3D3" }}>
         <motion.div
-            id="progress-bar"
-            className="progress-bar"
-            style={{ scaleX: scrollYProgress }}
+          id="progress-bar"
+          className="progress-bar"
+          style={{ scaleX: scrollYProgress }}
         />
-        <div id="homepage" className="min-h-screen relative" style={{ backgroundImage: `url(${haarlam})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+        <div
+          id="homepage"
+          className="min-h-screen relative"
+          style={{
+            backgroundImage: `url(${haarlam})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           <div className="absolute inset-0 bg-black/30 z-0" />
           <div style={{ textAlign: "center", paddingTop: "3rem" }}>
             <Menu />

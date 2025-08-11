@@ -12,8 +12,11 @@ const BeginningAnimation = (): React.JSX.Element => {
     if (portfolioButton) {
       portfolioButton.style.display = "none";
     }
-    if (window.location.href.split("/").at(-1) && window.location.href.split("/").at(-1) !== '#') {
-      window.location.href = '/';
+    if (
+      window.location.href.split("/").at(-1) &&
+      window.location.href.split("/").at(-1) !== "#"
+    ) {
+      window.location.href = "/";
     }
   };
 
@@ -75,10 +78,7 @@ const BeginningAnimation = (): React.JSX.Element => {
               }}
             >
               <Canvas>
-                <Environment
-                  files="./farm_field_puresky_1k.hdr"
-                  background
-                />
+                <Environment files="./farm_field_puresky_1k.hdr" background />
                 <Suspense fallback={null}>
                   {click && (
                     <PlaneModel
