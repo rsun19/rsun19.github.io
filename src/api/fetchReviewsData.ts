@@ -5,7 +5,6 @@ export const fetchReviewsData = async (
   setReviewsData: (review: Review[]) => void,
 ) => {
   if (process.env.NODE_ENV === "development") {
-    console.log("Using mock data");
     mocks.sort((a, b) => parseInt(b.rating_int) - parseInt(a.rating_int));
     setReviewsData(mocks.slice(0, 9));
   } else {

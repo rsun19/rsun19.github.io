@@ -9,8 +9,8 @@
 */
 
   *,
-  ::before,
-  ::after {
+::before,
+::after {
     box-sizing: border-box;
     /* 1 */
     border-width: 0;
@@ -22,8 +22,8 @@
   }
 
   ::before,
-  ::after {
-    --tw-content: "";
+::after {
+    --tw-content: '';
   }
 
   /*
@@ -43,23 +43,10 @@
     /* 3 */
     tab-size: 4;
     /* 3 */
-    font-family:
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      "Helvetica Neue",
-      Arial,
-      "Noto Sans",
-      sans-serif,
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol",
-      "Noto Color Emoji";
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     /* 4 */
-    font-feature-settings: normal;
+    -webkit-font-feature-settings: normal;
+            font-feature-settings: normal;
     /* 5 */
     font-variation-settings: normal;
     /* 6 */
@@ -98,7 +85,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
   abbr:where([title]) {
     -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted;
+            text-decoration: underline dotted;
   }
 
   /*
@@ -106,11 +93,11 @@ Remove the default font size and weight for headings.
 */
 
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: inherit;
   }
@@ -129,7 +116,7 @@ Add the correct font weight in Edge and Safari.
 */
 
   b,
-  strong {
+strong {
     font-weight: bolder;
   }
 
@@ -139,11 +126,10 @@ Add the correct font weight in Edge and Safari.
 */
 
   code,
-  kbd,
-  samp,
-  pre {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
+kbd,
+samp,
+pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -162,7 +148,7 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
   sub,
-  sup {
+sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -199,10 +185,10 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
   button,
-  input,
-  optgroup,
-  select,
-  textarea {
+input,
+optgroup,
+select,
+textarea {
     font-family: inherit;
     /* 1 */
     font-size: 100%;
@@ -224,7 +210,7 @@ Remove the inheritance of text transform in Edge and Firefox.
 */
 
   button,
-  select {
+select {
     text-transform: none;
   }
 
@@ -234,9 +220,9 @@ Remove the inheritance of text transform in Edge and Firefox.
 */
 
   button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
     -webkit-appearance: button;
     /* 1 */
     background-color: transparent;
@@ -274,7 +260,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
   ::-webkit-inner-spin-button,
-  ::-webkit-outer-spin-button {
+::-webkit-outer-spin-button {
     height: auto;
   }
 
@@ -283,7 +269,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-  [type="search"] {
+  [type='search'] {
     -webkit-appearance: textfield;
     /* 1 */
     outline-offset: -2px;
@@ -323,18 +309,18 @@ Removes the default spacing and border for appropriate elements.
 */
 
   blockquote,
-  dl,
-  dd,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  hr,
-  figure,
-  p,
-  pre {
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
     margin: 0;
   }
 
@@ -348,8 +334,8 @@ Removes the default spacing and border for appropriate elements.
   }
 
   ol,
-  ul,
-  menu {
+ul,
+menu {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -368,8 +354,15 @@ Prevent resizing textareas horizontally by default.
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    opacity: 1;
+    /* 1 */
+    color: #9ca3af;
+    /* 2 */
+  }
+
   input::placeholder,
-  textarea::placeholder {
+textarea::placeholder {
     opacity: 1;
     /* 1 */
     color: #9ca3af;
@@ -381,7 +374,7 @@ Set the default cursor for buttons.
 */
 
   button,
-  [role="button"] {
+[role="button"] {
     cursor: pointer;
   }
 
@@ -400,13 +393,13 @@ Make sure disabled buttons don't get the pointer cursor.
 */
 
   img,
-  svg,
-  video,
-  canvas,
-  audio,
-  iframe,
-  embed,
-  object {
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
     display: block;
     /* 1 */
     vertical-align: middle;
@@ -418,7 +411,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 */
 
   img,
-  video {
+video {
     max-width: 100%;
     height: auto;
   }
@@ -429,9 +422,57 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
     display: none;
   }
 
-  *,
-  ::before,
-  ::after {
+  *, ::before, ::after {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position:  ;
+    --tw-gradient-via-position:  ;
+    --tw-gradient-to-position:  ;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+  }
+
+  ::-webkit-backdrop {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
     --tw-translate-x: 0;
@@ -544,6 +585,22 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
 .m-3 {
   margin: 0.75rem;
 }
@@ -584,6 +641,24 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   height: 10rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-40 {
   width: 10rem;
 }
@@ -597,9 +672,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 }
 
 .transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -610,8 +684,32 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -634,6 +732,18 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   border-radius: 0.5rem;
 }
 
+.bg-black\/60 {
+  background-color: rgb(0 0 0 / 0.6);
+}
+
+.bg-black\/30 {
+  background-color: rgb(0 0 0 / 0.3);
+}
+
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -648,6 +758,10 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 .pt-3 {
   padding-top: 0.75rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -678,21 +792,31 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
-    0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .ring-2 {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
-    var(--tw-shadow, 0 0 #0000);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 .ring-gray-300 {
@@ -701,35 +825,9 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 }
 
 .transition {
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    -webkit-text-decoration-color,
-    -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    text-decoration-color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    backdrop-filter,
-    -webkit-text-decoration-color,
-    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -740,7 +838,19 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   padding-left: 2px;
   height: 35px;
   background-color: black;
-  animation: blink-caret 0.75s infinite;
+  -webkit-animation: blink-caret 0.75s infinite;
+          animation: blink-caret 0.75s infinite;
+}
+
+@-webkit-keyframes blink-caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes blink-caret {
@@ -847,11 +957,13 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   right: 0;
   height: 10px;
   background: red;
-  transform-origin: 0%;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
 }
 
 .menu {
-  filter: drop-shadow(1px 1px 1px #4700b3);
+  -webkit-filter: drop-shadow(1px 1px 1px #4700b3);
+          filter: drop-shadow(1px 1px 1px #4700b3);
   width: 300px;
 }
 
@@ -887,12 +999,16 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   width: 100%;
   height: 100vh;
   background-color: lightgrey;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  transition: -webkit-transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
   z-index: 5;
   /* overflow-x: hidden; */
 }
 
 .show {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }

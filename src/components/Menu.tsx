@@ -11,9 +11,9 @@ const Menu = (): React.JSX.Element => {
       const homeBorder = homeDiv.getBoundingClientRect();
       const portfolioBorder = portfolioDiv.getBoundingClientRect();
       const workBorder = workXpDiv.getBoundingClientRect();
-      if (portfolioBorder.top < 0 && -portfolioBorder.top >= workBorder.top) {
+      if (workBorder.top < 0 && -workBorder.top >= portfolioBorder.top) {
         navigatePage(2);
-      } else if (homeBorder.top < 0 && -homeBorder.top >= portfolioBorder.top) {
+      } else if (homeBorder.top < 0 && -homeBorder.top >= workBorder.top) {
         navigatePage(1);
       } else {
         navigatePage(0);
@@ -39,15 +39,15 @@ const Menu = (): React.JSX.Element => {
       }
     } else if (pageNum === 1 && handle && secondPage) {
       const secondPageWidth = secondPage.offsetWidth;
-      handle.style.marginLeft = "27%";
+      handle.style.marginLeft = "26%";
       if (secondPageWidth) {
-        handle.style.width = (secondPageWidth + 22).toString() + "px";
+        handle.style.width = (secondPageWidth + 30).toString() + "px";
       }
     } else if (pageNum === 2 && handle && thirdPage) {
       const thirdPageWidth = thirdPage.offsetWidth;
-      handle.style.marginLeft = "55%";
+      handle.style.marginLeft = "63%";
       if (thirdPageWidth) {
-        handle.style.width = (thirdPageWidth + 40).toString() + "px";
+        handle.style.width = (thirdPageWidth + 37).toString() + "px";
       }
     }
   };
@@ -74,11 +74,11 @@ const Menu = (): React.JSX.Element => {
         <a href="#" id="first-page" onClick={() => navigatePage(0)}>
           Home
         </a>
-        <a href="#portfolio" id="second-page" onClick={() => navigatePage(1)}>
-          Portfolio
-        </a>
-        <a href="#WorkXP" id="third-page" onClick={() => navigatePage(2)}>
+        <a href="#WorkXP" id="second-page" onClick={() => navigatePage(1)}>
           Experience
+        </a>
+        <a href="#portfolio" id="third-page" onClick={() => navigatePage(2)}>
+          Portfolio
         </a>
       </div>
     </div>
