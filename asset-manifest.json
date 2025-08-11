@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.63f33e5e.css",
-    "main.js": "/static/js/main.35b0bf29.js",
+    "main.js": "/static/js/main.c7add741.js",
     "static/media/haarlam.jpg": "/static/media/haarlam.9bdfea07901ff9354e71.jpg",
     "static/media/myImage.jpg": "/static/media/myImage.bf16e63916f86adcf997.jpg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -19,6 +19,6 @@
   },
   "entrypoints": [
     "static/css/main.63f33e5e.css",
-    "static/js/main.35b0bf29.js"
+    "static/js/main.c7add741.js"
   ]
 }
