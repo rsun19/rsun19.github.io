@@ -12,10 +12,7 @@ const BeginningAnimation = (): React.JSX.Element => {
     if (portfolioButton) {
       portfolioButton.style.display = "none";
     }
-    if (
-      window.location.href.split("/").at(-1) &&
-      window.location.href.split("/").at(-1) !== "#"
-    ) {
+    if (window.location.href.split("/").at(-1)) {
       window.location.href = "/";
     }
   };
