@@ -623,10 +623,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   margin: 0.75rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -657,20 +653,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 .h-40 {
   height: 10rem;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-fit {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .min-h-screen {
@@ -706,28 +688,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   align-items: center;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
 .gap-2 {
   gap: 0.5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .gap-9 {
@@ -754,16 +716,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   border-radius: 0.5rem;
 }
 
-.bg-black\/60 {
-  background-color: rgb(0 0 0 / 0.6);
-}
-
 .bg-black\/30 {
   background-color: rgb(0 0 0 / 0.3);
-}
-
-.bg-black\/20 {
-  background-color: rgb(0 0 0 / 0.2);
 }
 
 .p-1 {
@@ -780,10 +734,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 .pt-3 {
   padding-top: 0.75rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -817,16 +767,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-100 {
-  --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
-}
-
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .shadow {
