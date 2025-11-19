@@ -18,7 +18,7 @@
 
 6. Happy coding!
 
-7. If you want to deploy onto Github Pages, you will have to do run `npm run deploy`
+7. If you want to deploy onto GitHub Pages, you will have to run `npm run deploy`
 
 SOURCES:
 
