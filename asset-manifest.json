@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.63f33e5e.css",
-    "main.js": "/static/js/main.3282d6ec.js",
+    "main.js": "/static/js/main.26e1e5fa.js",
     "static/media/haarlam.jpg": "/static/media/haarlam.9bdfea07901ff9354e71.jpg",
-    "static/media/myImage.jpg": "/static/media/myImage.bf16e63916f86adcf997.jpg",
+    "static/media/myImage.jpg": "/static/media/myImage.3805b98b317b434aad89.jpg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/bookBlog.jpg": "/static/media/bookBlog.287f906d7ce1d64922d2.jpg",
     "static/media/recycleAI.jpg": "/static/media/recycleAI.393e1ad58b830a3f2d5b.jpg",
@@ -19,6 +19,6 @@
   },
   "entrypoints": [
     "static/css/main.63f33e5e.css",
-    "static/js/main.3282d6ec.js"
+    "static/js/main.26e1e5fa.js"
   ]
 }
