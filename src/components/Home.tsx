@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import PortfolioSlider from "./carousel/PortfolioSlider";
 import "font-awesome/css/font-awesome.min.css";
 import profile from "../assets/myImage.jpg";
 import haarlam from "../assets/haarlam.jpg";
-import Reviews from "./Reviews/Reviews";
 import { motion, useScroll } from "framer-motion";
 import Menu from "./Menu";
 import ContactBar from "./ContactBar";
 import WorkTimeline from "./Timeline/Timeline";
-import { Review } from "types";
-import { fetchReviewsData } from "../api/fetchReviewsData";
 import { Flex } from "@mantine/core";
 
 const Home = (): React.JSX.Element => {
-  const [reviewsData, setReviewsData] = useState<Review[]>([]);
-
-  useEffect(() => {
-    fetchReviewsData(setReviewsData);
-  }, []);
-
   useEffect(() => {
     scrollUp();
   }, []);
@@ -102,15 +93,6 @@ const Home = (): React.JSX.Element => {
           }}
         >
           <PortfolioSlider />
-        </div>
-        <div
-          style={{
-            marginLeft: "2rem",
-            marginRight: "2rem",
-            paddingTop: "10px",
-          }}
-        >
-          <Reviews reviewsData={reviewsData} />
         </div>
         <br />
         <br />

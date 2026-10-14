@@ -10,12 +10,7 @@ import {
   rem,
 } from "@mantine/core";
 import classes from "./CardsCarousel.module.css";
-import tripPlanner from "../../assets/tripPlanner.jpg";
-import bookBlog from "../../assets/bookBlog.jpg";
-import jokeGenerator from "../../assets/jokeGenerator.jpg";
-import recycleAI from "../../assets/recycleAI.jpg";
-import myHealth from "../../assets/HealthApp.jpg";
-import { PortfolioItem } from "types";
+import { PortfolioItem } from "../../types";
 import React from "react";
 
 const CardProp = ({
@@ -70,14 +65,12 @@ const CardProp = ({
 const portfolioItems: PortfolioItem[] = [
   {
     id: "1",
-    image: bookBlog,
     title: "Book Blog App",
     category: "Web Development",
     description: "Python, JavaScript, Flask, HTML, CSS",
     color: "#95D2B3",
     links: [
       {
-        id: "1",
         link: "https://www.robertsrandomreviews.com",
         name: "View website",
       },
@@ -85,14 +78,12 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "2",
-    image: bookBlog,
     title: "Flashcards App",
     category: "Web Development",
     description: "Typescript, React, Javascript, Next.js, Express.js, Docker",
     color: "#FFE4E1",
     links: [
       {
-        id: "1",
         link: "https://github.com/rsun19/easy-cards-docker",
         name: "View source code",
       },
@@ -101,13 +92,11 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: "3",
     title: "Trip Planning App",
-    image: tripPlanner,
     category: "Mobile App Development",
     description: "Dart, Python, Flask, Firebase, PostgreSQL",
     color: "beige",
     links: [
       {
-        id: "1",
         link: "https://github.com/rsun19/Trip-Planner-App",
         name: "View source code",
       },
@@ -115,14 +104,12 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "4",
-    image: jokeGenerator,
     title: "Joke Generator App",
     category: "Fullstack and iOS Development",
     description: "JavaScript, React.js, Swift, Python, Flask",
     color: "#BACD92",
     links: [
       {
-        id: "1",
         link: "https://github.com/rsun19/jokegenerator",
         name: "View source code",
       },
@@ -130,14 +117,12 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "5",
-    image: recycleAI,
     title: "Image Classifier App",
     category: "ML/AI",
     description: "Python, Flask, PyTorch",
     color: "#EEA5A6",
     links: [
       {
-        id: "1",
         link: "https://github.com/rsun19/RecycleImageClassifier_dev",
         name: "View source code",
       },
@@ -145,7 +130,6 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "6",
-    image: myHealth,
     title: "Mental Health App",
     category: "iOS Development",
     color: "#B0A695",

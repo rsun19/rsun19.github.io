@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 const Menu = (): React.JSX.Element => {
-  const [, setPage] = useState(0);
-
   const arrangeMenu = () => {
     const homeDiv = document.getElementById("homeTop");
     const portfolioDiv = document.getElementById("portfolio");
@@ -21,16 +19,11 @@ const Menu = (): React.JSX.Element => {
     }
   };
 
-  const handleScroll = () => {
-    arrangeMenu();
-  };
-
   const navigatePage = (pageNum: number) => {
     const firstPage = document.getElementById("first-page");
     const secondPage = document.getElementById("second-page");
     const thirdPage = document.getElementById("third-page");
     const handle = document.getElementById("handle");
-    setPage(pageNum);
     if (pageNum === 0 && handle && firstPage) {
       const firstPageWidth = firstPage.offsetWidth;
       handle.style.marginLeft = "0%";
@@ -53,12 +46,12 @@ const Menu = (): React.JSX.Element => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", arrangeMenu);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", arrangeMenu);
     };
-  });
+  }, []);
 
   return (
     <div
