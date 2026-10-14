@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unknown-property */
 import * as React from "react";
-import { useFrame } from "@react-three/fiber";
-import { useLoader, useThree } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { useFrame, useLoader, useThree } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import * as THREE from "three";
 
 // eslint-disable-next-line react/prop-types
-const PlaneModel = ({ onAnimationFinish, onMidwayFinish, start }) => {
+const PlaneModel = ({ onAnimationFinish, onMidwayFinish }) => {
   const meshModel = React.useRef();
   const gltf = useLoader(GLTFLoader, "./scene.gltf");
   const { viewport } = useThree();
@@ -56,7 +55,7 @@ const PlaneModel = ({ onAnimationFinish, onMidwayFinish, start }) => {
       meshModel.current.position.set(...curPosition.position);
     } else if (meshModel.current.position.y > -0.01) {
       halfway = true;
-    } else if (!halfway && start && meshModel.current) {
+    } else if (meshModel.current) {
       curPosition.position[0] +=
         (middlePosition[0] - curPosition.position[0]) * 0.02;
       curPosition.position[1] +=

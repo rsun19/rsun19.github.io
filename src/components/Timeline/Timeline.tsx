@@ -1,6 +1,6 @@
 import { Timeline, Text, Card } from "@mantine/core";
 import React from "react";
-import { PortfolioItem } from "types";
+import { PortfolioItem } from "../../types";
 
 export default function WorkTimeline(): React.JSX.Element {
   const workItems: PortfolioItem[] = [

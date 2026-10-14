@@ -1,40 +1,26 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import Home from "../Home";
 import PlaneModel from "./PlaneModel";
 
 const BeginningAnimation = (): React.JSX.Element => {
-  const [click, setClick] = useState(false);
-  const startAnimation = () => {
-    const portfolioButton = document.getElementById("portfolioButton");
-    setClick(true);
-    if (portfolioButton) {
-      portfolioButton.style.display = "none";
-    }
+  useEffect(() => {
     if (window.location.href.split("/").at(-1)) {
       window.location.href = "/";
     }
-  };
-
-  useEffect(() => {
-    startAnimation();
   }, []);
 
-  let isMidToggled = false;
+  const isMidToggled = useRef(false);
 
   const [finishAnimation, setFinishAnimation] = useState(false);
 
-  const finishAnimationChange = (change: boolean) => {
-    setFinishAnimation(change);
-  };
-
   const finishMidFunc = () => {
-    if (!isMidToggled) {
+    if (!isMidToggled.current) {
       const page = document.getElementById("home-page");
       if (page) {
         page.classList.toggle("show");
-        isMidToggled = true;
+        isMidToggled.current = true;
         const app = document.getElementById("App");
         const progressBar = document.getElementById("progress-bar");
         if (app && progressBar) {
@@ -77,13 +63,10 @@ const BeginningAnimation = (): React.JSX.Element => {
               <Canvas>
                 <Environment files="./farm_field_puresky_1k.hdr" background />
                 <Suspense fallback={null}>
-                  {click && (
-                    <PlaneModel
-                      onAnimationFinish={finishAnimationChange}
-                      onMidwayFinish={finishMidFunc}
-                      start={click}
-                    />
-                  )}
+                  <PlaneModel
+                    onAnimationFinish={setFinishAnimation}
+                    onMidwayFinish={finishMidFunc}
+                  />
                   <OrbitControls />
                 </Suspense>
               </Canvas>

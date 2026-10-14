@@ -4,21 +4,13 @@
 
 # Getting Started with running locally
 
-1. Install Node.js
+1. Install Node.js (20.19+)
 
-2. In the terminal (can access with VS Code terminal), run this command:
+2. run `npm install`
 
-- `npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch`
+3. run `npm start`
 
-3. run `npm install`
-
-4. run `npm start`
-
-5. In subsequent steps, steps 2 (if you want to edit CSS), 3, and 4 are mandatory.
-
-6. Happy coding!
-
-7. If you want to deploy onto GitHub Pages, you will have to run `npm run deploy`
+4. If you want to deploy onto GitHub Pages, run `npm run deploy`
 
 SOURCES:
 
