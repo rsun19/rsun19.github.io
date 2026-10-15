@@ -128,7 +128,7 @@ export const experience: ExperienceItem[] = [
       "Shipped 41 PRs in 3 months, adding 25+ search index entries to the Hybrid Cloud Console's global search and improving result relevance.",
       "Built WebSocket payload validation, authored Cypress E2E tests, added a bulk select toggle for notification preferences, and fixed responsive UI bugs on mobile viewports.",
     ],
-    tech: ["React", "JavaScript", "Cypress", "WebSockets"],
+    tech: ["React", "JavaScript", "Cypress"],
   },
 ];
 
