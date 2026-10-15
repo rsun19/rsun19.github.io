@@ -3,12 +3,28 @@ export interface LinkProps {
   name: string;
 }
 
-export interface PortfolioItem {
+export interface ExperienceItem {
+  id: string;
+  role: string;
+  team?: string;
+  company: string;
+  location: string;
+  date: string;
+  bullets: string[];
+  tech: string[];
+}
+
+export interface Project {
   id: string;
   title: string;
-  description?: string;
-  category?: string;
+  blurb: string;
+  tech: string[];
+  links: LinkProps[];
   date?: string;
-  color?: string;
-  links?: LinkProps[];
+  featured?: boolean;
+}
+
+export interface SkillGroup {
+  label: string;
+  items: string[];
 }
