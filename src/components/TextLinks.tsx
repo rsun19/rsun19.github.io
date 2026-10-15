@@ -1,5 +1,6 @@
 import React from "react";
 import { profile } from "../data";
+import ExternalLink from "./ExternalLink";
 
 const links = [
   { label: "Résumé (PDF)", href: profile.resume, external: true },
@@ -19,13 +20,15 @@ const TextLinks = ({
         .filter((l) => include.includes(l.label))
         .map(({ label, href, external }) => (
           <li key={label}>
-            <a
-              href={href}
-              className="text-link"
-              {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-            >
-              {label}
-            </a>
+            {external ? (
+              <ExternalLink href={href} className="text-link">
+                {label}
+              </ExternalLink>
+            ) : (
+              <a href={href} className="text-link">
+                {label}
+              </a>
+            )}
           </li>
         ))}
     </ul>

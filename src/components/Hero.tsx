@@ -5,7 +5,7 @@ import TextLinks from "./TextLinks";
 
 const Hero = (): React.JSX.Element => {
   return (
-    <section id="top" className="pt-32 pb-10 md:pt-40 md:pb-14">
+    <section id="top" className="pt-28 pb-10 md:pt-32 md:pb-12">
       <div className="flex flex-col-reverse items-start gap-8 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl">
           <h1 className="font-serif text-4xl font-semibold sm:text-5xl">

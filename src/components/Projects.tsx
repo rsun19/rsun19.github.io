@@ -2,6 +2,7 @@ import React from "react";
 import { projects } from "../data";
 import { Project } from "../types";
 import Section from "./Section";
+import ExternalLink from "./ExternalLink";
 
 const ProjectCard = ({
   title,
@@ -25,14 +26,10 @@ const ProjectCard = ({
       <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
         {links.map(({ name, link }) => (
           <li key={link}>
-            <a
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-              className="text-link"
-            >
-              {name} ↗<span className="sr-only"> ({title})</span>
-            </a>
+            <ExternalLink href={link} className="text-link">
+              {name}
+              <span className="sr-only"> ({title})</span>
+            </ExternalLink>
           </li>
         ))}
       </ul>

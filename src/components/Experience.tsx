@@ -5,7 +5,7 @@ import Section from "./Section";
 const Experience = (): React.JSX.Element => {
   return (
     <Section id="experience" title="Experience">
-      <ol className="space-y-12">
+      <ol className="space-y-10">
         {experience.map((job) => (
           <li
             key={job.id}
