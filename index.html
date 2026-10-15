@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a0a0b" />
+    <meta name="theme-color" content="#f7f5f0" />
     <title>Robert Sun — Software Engineer</title>
     <meta
       name="description"
@@ -21,9 +22,9 @@
           theme = localStorage.getItem("theme");
         } catch (e) {}
         if (theme !== "light" && theme !== "dark") {
-          theme = window.matchMedia("(prefers-color-scheme: light)").matches
-            ? "light"
-            : "dark";
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
         }
         document.documentElement.dataset.theme = theme;
       })();
@@ -44,8 +45,8 @@
       content="Software engineer at Chewy, previously OpenShift AI at Red Hat."
     />
     <meta name="twitter:image" content="https://robertssun.me/og.jpg" />
-    <script type="module" crossorigin src="/assets/index-CBYHy8VW.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BD2MZonq.css">
+    <script type="module" crossorigin src="/assets/index-DjBLrSBu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CoaL4Q6r.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
