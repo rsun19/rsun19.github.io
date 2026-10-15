@@ -1,27 +1,20 @@
 import React from "react";
-import { LuMail } from "react-icons/lu";
 import { profile } from "../data";
 import Section from "./Section";
-import SocialLinks from "./SocialLinks";
+import TextLinks from "./TextLinks";
 
 const Contact = (): React.JSX.Element => {
   return (
-    <Section id="contact" title="Get in touch">
-      <div className="flex flex-col items-start gap-6">
-        <p className="max-w-xl text-lg leading-relaxed text-muted">
-          I&apos;m always happy to talk about frontend engineering, developer
-          tooling, or new opportunities. The fastest way to reach me is email.
-        </p>
-        <div className="flex flex-wrap items-center gap-4">
-          <a
-            href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 font-medium text-accent-fg transition hover:brightness-110"
-          >
-            <LuMail className="size-4" aria-hidden />
-            Say hello
-          </a>
-          <SocialLinks />
-        </div>
+    <Section id="contact" title="Contact">
+      <p className="text-lg">
+        Email me at{" "}
+        <a href={`mailto:${profile.email}`} className="text-link">
+          {profile.email}
+        </a>
+        .
+      </p>
+      <div className="mt-4">
+        <TextLinks include={["GitHub", "LinkedIn"]} />
       </div>
     </Section>
   );

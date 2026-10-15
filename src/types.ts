@@ -21,7 +21,6 @@ export interface Project {
   tech: string[];
   links: LinkProps[];
   date?: string;
-  featured?: boolean;
 }
 
 export interface SkillGroup {

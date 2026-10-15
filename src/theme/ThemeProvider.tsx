@@ -27,8 +27,9 @@ const readStoredTheme = (): Theme | null => {
   }
 };
 
+// Light unless the OS explicitly asks for dark.
 const systemTheme = (): Theme =>
-  window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
 // index.html sets data-theme before React loads to avoid a flash, so start
 // from whatever it chose.
@@ -56,7 +57,7 @@ export const ThemeProvider = ({
 
   // Follow the OS setting until the visitor picks a theme themselves.
   useEffect(() => {
-    const query = window.matchMedia("(prefers-color-scheme: light)");
+    const query = window.matchMedia("(prefers-color-scheme: dark)");
     const onChange = () => {
       if (!readStoredTheme()) setThemeState(systemTheme());
     };

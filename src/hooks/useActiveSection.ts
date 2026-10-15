@@ -1,34 +1,40 @@
 import { useEffect, useState } from "react";
 
-// Returns the id of the section currently nearest the top of the viewport.
+// Sections become active once their top passes this line (nav height + buffer).
+const ACTIVE_LINE = 120;
+
+// Returns the id of the section currently under the nav, or null above the
+// first section.
 export default function useActiveSection(ids: string[]): string | null {
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
-    const visible = new Set<string>();
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            visible.add(entry.target.id);
-          } else {
-            visible.delete(entry.target.id);
-          }
-        }
-        // The previous section can still touch the band's edge after an anchor
-        // jump, so prefer the furthest-down visible section.
-        const last = [...ids].reverse().find((id) => visible.has(id));
-        setActive(last ?? null);
-      },
-      // A section counts as active once it reaches the band below the nav.
-      { rootMargin: "-80px 0px -55% 0px" },
-    );
+    // Cheap enough (a few rect reads) to run on every scroll event, and
+    // React skips the re-render when the value is unchanged.
+    const update = () => {
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+      // The last section is often too short to reach the line, so treat the
+      // bottom of the page as being in it.
+      if (atBottom) {
+        setActive(ids[ids.length - 1] ?? null);
+        return;
+      }
+      const passed = ids.filter((id) => {
+        const el = document.getElementById(id);
+        return el && el.getBoundingClientRect().top <= ACTIVE_LINE;
+      });
+      setActive(passed[passed.length - 1] ?? null);
+    };
 
-    for (const id of ids) {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    }
-    return () => observer.disconnect();
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
   }, [ids]);
 
   return active;

@@ -2,7 +2,9 @@
 @import "./theme/tokens.css";
 
 @theme {
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4 Variable", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 @layer base {
@@ -18,9 +20,6 @@
 
   body {
     @apply bg-bg font-sans text-fg antialiased;
-    transition:
-      background-color 0.2s ease,
-      color 0.2s ease;
   }
 
   /* Tailwind v4 resets buttons to the default cursor. */
@@ -30,13 +29,20 @@
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+    background: var(--color-border);
     color: var(--color-fg);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-fg);
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Plain underlined text link; the only place the accent color appears. */
+  .text-link {
+    @apply underline decoration-border decoration-1 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent;
   }
 }
