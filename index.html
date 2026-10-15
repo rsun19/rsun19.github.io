@@ -13,6 +13,21 @@
     <link rel="canonical" href="https://robertssun.me/" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
+    <script>
+      // Apply the saved or system theme before first paint (see ThemeProvider).
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://robertssun.me/" />
@@ -29,8 +44,8 @@
       content="Software engineer at Chewy, previously OpenShift AI at Red Hat."
     />
     <meta name="twitter:image" content="https://robertssun.me/og.jpg" />
-    <script type="module" crossorigin src="/assets/index-Cqs7XTxh.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DhS2PkrA.css">
+    <script type="module" crossorigin src="/assets/index-CBYHy8VW.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BD2MZonq.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
