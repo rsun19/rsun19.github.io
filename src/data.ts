@@ -14,8 +14,8 @@ export const profile = {
 };
 
 export const about = [
-  "I'm a software engineer on the Chewy+ Loyalty team at Chewy, where I build the membership experience across web and mobile — from the landing page and member dashboard to upsells in cart and checkout.",
-  "Before that I was at Red Hat — first as an intern, then full-time — on the OpenShift AI dashboard, contributing upstream to Kubeflow and leading the MLflow experiment-tracking integration. I care about fast, well-tested frontends, healthy CI, and tooling that makes teams quicker.",
+  "I'm a software engineer at Chewy on the Chewy+ Loyalty team. I work on the membership side of the site and app: the Chewy+ landing page, the member dashboard, and the upsells you see in cart, checkout and Autoship.",
+  "Before Chewy, I was at Red Hat from 2023 to 2026. I interned twice, first on the Hybrid Cloud Console and then on the OpenShift AI dashboard, and joined the dashboard team full-time after graduating. Over that time I merged 125+ PRs into the dashboard, contributed upstream to Kubeflow, led the MLflow experiment tracking integration, and cut our production container image size by 52%.",
 ];
 
 export const education = {
