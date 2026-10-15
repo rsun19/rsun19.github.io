@@ -1,19 +1,13 @@
 @import "tailwindcss";
+@import "./theme/tokens.css";
 
 @theme {
-  --color-bg: #0a0a0b;
-  --color-surface: #141416;
-  --color-border: #26262a;
-  --color-fg: #e4e4e7;
-  --color-muted: #a1a1aa;
-  --color-accent: #2dd4bf;
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -24,11 +18,20 @@
 
   body {
     @apply bg-bg font-sans text-fg antialiased;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  /* Tailwind v4 resets buttons to the default cursor. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 
   ::selection {
     background: color-mix(in srgb, var(--color-accent) 30%, transparent);
-    color: white;
+    color: var(--color-fg);
   }
 
   :focus-visible {
