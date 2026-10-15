@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { MotionConfig } from "framer-motion";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -21,24 +20,21 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider>
-      <MotionConfig reducedMotion="user">
-        <Nav />
-        <main className="mx-auto max-w-5xl overflow-x-clip px-4 sm:px-6">
-          <Hero />
-          <About />
-          <Experience />
-          <Projects />
-          <Contact />
-        </main>
-        <footer className="border-t border-border">
-          <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-8 text-sm text-muted sm:flex-row sm:justify-between sm:px-6">
-            <p>
-              © {new Date().getFullYear()} {profile.name}
-            </p>
-            <p>Built with React, Tailwind CSS & Framer Motion.</p>
-          </div>
-        </footer>
-      </MotionConfig>
+      <Nav />
+      <main className="mx-auto max-w-5xl overflow-x-clip px-4 sm:px-6">
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      <footer className="border-t border-border">
+        <div className="mx-auto max-w-5xl px-4 py-8 text-sm text-muted sm:px-6">
+          <p>
+            © {new Date().getFullYear()} {profile.name}
+          </p>
+        </div>
+      </footer>
     </ThemeProvider>
   );
 };

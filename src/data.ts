@@ -1,5 +1,5 @@
 // Site content. Experience, skills and education mirror the résumé source
-// (github.com/rsun19/robert_sun_resume, ROBERT_SUN_RESUME.tex) — keep them in sync.
+// (github.com/rsun19/robert_sun_resume, ROBERT_SUN_RESUME.tex). Keep them in sync.
 import { ExperienceItem, Project, SkillGroup } from "./types";
 
 export const profile = {
@@ -74,7 +74,7 @@ export const experience: ExperienceItem[] = [
     date: "Jun 2026 – Present",
     bullets: [
       "Shipped 50 PRs across 10 repositories and reviewed 260 PRs across 30 in under 4 months for Chewy+ membership.",
-      "Redesigned the Chewy+ landing page and member dashboard (V4) across 12 PRs — pricing hero with a sticky trial CTA, CMS-driven savings, benefits and FAQ sections — with new Playwright E2E coverage replacing the V2 suites.",
+      "Redesigned the Chewy+ landing page and member dashboard (V4) across 12 PRs, building a pricing hero with a sticky trial CTA and CMS-driven savings, benefits and FAQ sections, with new Playwright E2E coverage replacing the V2 suites.",
       "Built the Sampling V2 free-sample filtering UI for web and mobile, with pet-type and category facets passed through to the backend via GraphQL.",
       "Migrated Chewy+ upsell plan and eligibility data in Cart, Checkout and Autoship from REST to GraphQL across 9 PRs, with fail-closed validation.",
       "Built Dynatrace config-as-code dashboards and alerts for 4 loyalty services and added lint and type-check gates to CI.",
@@ -89,7 +89,7 @@ export const experience: ExperienceItem[] = [
     location: "Boston, MA",
     date: "Dec 2024 – Jun 2026",
     bullets: [
-      "Led the MLflow experiment-tracking UI integration into the OpenShift AI dashboard across 2 repositories and 15+ PRs — iframe rendering, dark-mode sync, design-token overrides and a feature-flagged rollout.",
+      "Led the MLflow experiment tracking UI integration into the OpenShift AI dashboard across 2 repositories and 15+ PRs, delivering iframe rendering, dark mode sync, design token overrides and a feature-flagged rollout.",
       "Closed a 4-month-old CI integrity gap that let PRs merge without passing mock tests, by adding pass/fail validation to GitHub Actions and a required context to the Prow Tide merge bot.",
       "Reduced production container image size by 52% by re-engineering the monorepo build pipeline.",
       "Integrated the upstream Kubeflow Model Registry, built module-federation extensions for model serving, and migrated routes and Cypress E2E tests to upstream API patterns across 15+ contributions.",
@@ -147,11 +147,10 @@ export const projects: Project[] = [
       "Docker",
     ],
     links: [
-      { name: "Live site", link: "https://www.trackthemetro.com" },
-      { name: "Source", link: "https://github.com/rsun19/transit-tracker" },
+      { name: "trackthemetro.com", link: "https://www.trackthemetro.com" },
+      { name: "GitHub", link: "https://github.com/rsun19/transit-tracker" },
     ],
-    date: "2026 – Present",
-    featured: true,
+    date: "2026–",
   },
   {
     id: "open-source",
@@ -161,11 +160,11 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "Kubernetes"],
     links: [
       {
-        name: "ODH Dashboard PRs",
+        name: "odh-dashboard PRs",
         link: "https://github.com/opendatahub-io/odh-dashboard/pulls?q=is%3Apr+author%3Arsun19+is%3Amerged",
       },
       {
-        name: "Kubeflow PRs",
+        name: "Kubeflow Hub PRs",
         link: "https://github.com/kubeflow/hub/pulls?q=is%3Apr+author%3Arsun19+is%3Amerged",
       },
     ],
@@ -177,7 +176,7 @@ export const projects: Project[] = [
       "A collaborative flashcard site where users build decks with rich-text editors. Fully containerized with Docker.",
     tech: ["TypeScript", "Next.js", "Prisma", "Docker"],
     links: [
-      { name: "Source", link: "https://github.com/rsun19/easy-cards-docker" },
+      { name: "GitHub", link: "https://github.com/rsun19/easy-cards-docker" },
     ],
   },
   {
@@ -187,7 +186,7 @@ export const projects: Project[] = [
       "A mobile trip planner with Google Sign-In, shareable itineraries, turn-by-turn directions and a ChatGPT-powered itinerary generator.",
     tech: ["Flutter", "Dart", "PostgreSQL", "Firebase"],
     links: [
-      { name: "Source", link: "https://github.com/rsun19/Trip-Planner-App" },
+      { name: "GitHub", link: "https://github.com/rsun19/Trip-Planner-App" },
     ],
   },
   {
@@ -198,7 +197,7 @@ export const projects: Project[] = [
     tech: ["Python", "PyTorch", "Flask"],
     links: [
       {
-        name: "Source",
+        name: "GitHub",
         link: "https://github.com/rsun19/RecycleImageClassifier_dev",
       },
     ],
@@ -210,7 +209,10 @@ export const projects: Project[] = [
       "My personal book-review blog, with API endpoints for managing posts and comment sections.",
     tech: ["Python", "Flask", "JavaScript", "Tailwind"],
     links: [
-      { name: "Live site", link: "https://www.robertsrandomreviews.com" },
+      {
+        name: "robertsrandomreviews.com",
+        link: "https://www.robertsrandomreviews.com",
+      },
     ],
   },
   {
@@ -220,7 +222,7 @@ export const projects: Project[] = [
       "A joke generator with a React web client and a native iOS app, both backed by a Flask API.",
     tech: ["React", "Swift", "Python", "Flask"],
     links: [
-      { name: "Source", link: "https://github.com/rsun19/jokegenerator" },
+      { name: "GitHub", link: "https://github.com/rsun19/jokegenerator" },
     ],
   },
 ];
