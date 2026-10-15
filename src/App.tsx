@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { profile } from "./data";
+import { ThemeProvider } from "./theme/ThemeProvider";
 
 const App: React.FC = () => {
   // The browser tries to jump to the URL's #section before React has rendered
@@ -19,24 +20,26 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <MotionConfig reducedMotion="user">
-      <Nav />
-      <main className="mx-auto max-w-5xl overflow-x-clip px-4 sm:px-6">
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-8 text-sm text-muted sm:flex-row sm:justify-between sm:px-6">
-          <p>
-            © {new Date().getFullYear()} {profile.name}
-          </p>
-          <p>Built with React, Tailwind CSS & Framer Motion.</p>
-        </div>
-      </footer>
-    </MotionConfig>
+    <ThemeProvider>
+      <MotionConfig reducedMotion="user">
+        <Nav />
+        <main className="mx-auto max-w-5xl overflow-x-clip px-4 sm:px-6">
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+        <footer className="border-t border-border">
+          <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-8 text-sm text-muted sm:flex-row sm:justify-between sm:px-6">
+            <p>
+              © {new Date().getFullYear()} {profile.name}
+            </p>
+            <p>Built with React, Tailwind CSS & Framer Motion.</p>
+          </div>
+        </footer>
+      </MotionConfig>
+    </ThemeProvider>
   );
 };
 

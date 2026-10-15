@@ -15,7 +15,7 @@ const Contact = (): React.JSX.Element => {
         <div className="flex flex-wrap items-center gap-4">
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 font-medium text-bg transition hover:brightness-110"
+            className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 font-medium text-accent-fg transition hover:brightness-110"
           >
             <LuMail className="size-4" aria-hidden />
             Say hello

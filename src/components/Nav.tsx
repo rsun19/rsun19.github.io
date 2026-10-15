@@ -3,6 +3,7 @@ import { motion, useScroll } from "framer-motion";
 import { LuMenu, LuX } from "react-icons/lu";
 import useActiveSection from "../hooks/useActiveSection";
 import { profile } from "../data";
+import ThemeToggle from "./ThemeToggle";
 
 const sections = [
   { id: "about", label: "About" },
@@ -81,18 +82,24 @@ const Nav = (): React.JSX.Element => {
               Résumé
             </a>
           </li>
+          <li className="ml-1">
+            <ThemeToggle />
+          </li>
         </ul>
 
-        <button
-          type="button"
-          className="flex size-10 items-center justify-center rounded-lg text-fg md:hidden"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? <LuX className="size-6" /> : <LuMenu className="size-6" />}
-        </button>
+        <div className="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="flex size-10 items-center justify-center rounded-lg text-fg"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <LuX className="size-6" /> : <LuMenu className="size-6" />}
+          </button>
+        </div>
       </nav>
 
       {open && (

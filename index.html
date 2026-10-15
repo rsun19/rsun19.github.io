@@ -13,6 +13,21 @@
     <link rel="canonical" href="https://robertssun.me/" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
+    <script>
+      // Apply the saved or system theme before first paint (see ThemeProvider).
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://robertssun.me/" />

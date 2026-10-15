@@ -61,7 +61,7 @@ const Hero = (): React.JSX.Element => {
               href={profile.resume}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 font-medium text-bg transition hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 font-medium text-accent-fg transition hover:brightness-110"
             >
               <LuFileText className="size-4" aria-hidden />
               View résumé
