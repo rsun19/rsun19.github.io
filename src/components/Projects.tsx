@@ -23,16 +23,18 @@ const ProjectCard = ({
         {blurb}
       </p>
       <p className="mt-4 text-sm text-muted">{tech.join(", ")}</p>
-      <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-        {links.map(({ name, link }) => (
-          <li key={link}>
-            <ExternalLink href={link} className="text-link">
-              {name}
-              <span className="sr-only"> ({title})</span>
-            </ExternalLink>
-          </li>
-        ))}
-      </ul>
+      {links.length > 0 && (
+        <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          {links.map(({ name, link }) => (
+            <li key={link}>
+              <ExternalLink href={link} className="text-link">
+                {name}
+                <span className="sr-only"> ({title})</span>
+              </ExternalLink>
+            </li>
+          ))}
+        </ul>
+      )}
     </article>
   );
 };

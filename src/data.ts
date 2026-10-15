@@ -208,12 +208,7 @@ export const projects: Project[] = [
     blurb:
       "My personal book-review blog, with API endpoints for managing posts and comment sections.",
     tech: ["Python", "Flask", "JavaScript", "Tailwind"],
-    links: [
-      {
-        name: "robertsrandomreviews.com",
-        link: "https://www.robertsrandomreviews.com",
-      },
-    ],
+    links: [],
   },
   {
     id: "joke-generator",
