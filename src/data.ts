@@ -150,7 +150,7 @@ export const projects: Project[] = [
       { name: "trackthemetro.com", link: "https://www.trackthemetro.com" },
       { name: "GitHub", link: "https://github.com/rsun19/transit-tracker" },
     ],
-    date: "2026–",
+    date: "Apr 2026 – Present",
   },
   {
     id: "open-source",

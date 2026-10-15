@@ -3,6 +3,7 @@ import { LuMenu, LuX } from "react-icons/lu";
 import useActiveSection from "../hooks/useActiveSection";
 import { profile } from "../data";
 import ThemeToggle from "./ThemeToggle";
+import ExternalLink from "./ExternalLink";
 
 const sections = [
   { id: "about", label: "About" },
@@ -43,14 +44,9 @@ const Nav = (): React.JSX.Element => {
             </li>
           ))}
           <li>
-            <a
-              href={profile.resume}
-              target="_blank"
-              rel="noreferrer"
-              className="text-link text-sm"
-            >
+            <ExternalLink href={profile.resume} className="text-link text-sm">
               Résumé
-            </a>
+            </ExternalLink>
           </li>
           <li>
             <ThemeToggle />
@@ -93,14 +89,12 @@ const Nav = (): React.JSX.Element => {
             </li>
           ))}
           <li>
-            <a
+            <ExternalLink
               href={profile.resume}
-              target="_blank"
-              rel="noreferrer"
               className="block py-2.5 text-muted"
             >
               Résumé
-            </a>
+            </ExternalLink>
           </li>
         </ul>
       )}
